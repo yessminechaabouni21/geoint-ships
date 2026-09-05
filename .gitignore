@@ -1,11 +1,29 @@
+# --- Secrets, never commit ---
 .env
-venv/
-.venv/
+*.pem
+*credentials*
+
+# --- Python ---
 __pycache__/
 *.pyc
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-*.egg-info/
-.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- Raw / bulk data: exclude by default ---
+data/raw/
+data/processed/*ais_positions*.csv
+data/processed/*sar_detections*.csv
+
+# --- Explicitly KEEP these result/finding files (override the excludes above) ---
+!data/processed/hormuz_crisis_mar2026_reclassified.csv
+!data/processed/hormuz_control_mar2026_reclassified.csv
+!data/processed/hormuz_trajectory_deviation_v2.csv
+!data/processed/hormuz_anchorage_confound_check.csv
+!data/processed/hormuz_near_port_event_inspection.html
+!data/processed/qatar_gnss_spoofing_oct2025_classified.csv
+!data/processed/qatar_gnss_spoofing_oct2025_map.html
+!data/processed/qatar_control_sept2025_classified.csv
+
+# --- OS/editor junk ---
+.DS_Store
+.vscode/
