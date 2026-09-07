@@ -1,0 +1,65 @@
+mmsi,ship_name,imo,flag_state,resolved_vessel_type,event_no,check,window,timestamp,value_type,value,gap12_hours
+511101414,SELENIA,,PLW,OTHER,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 01:00:00+00:00,deviation_km,25.88,1.0
+511101414,SELENIA,,PLW,OTHER,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 05:00:00+00:00,deviation_km,28.09,1.0
+511101414,SELENIA,,PLW,OTHER,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 11:00:00+00:00,deviation_km,652.45,29.0
+511101414,SELENIA,,PLW,OTHER,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 13:00:00+00:00,deviation_km,32.31,1.0
+511101414,SELENIA,,PLW,OTHER,4,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 18:00:00+00:00,deviation_km,25.89,1.0
+511101414,SELENIA,,PLW,OTHER,4,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 19:00:00+00:00,deviation_km,25.11,1.0
+511101414,SELENIA,,PLW,OTHER,4,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 21:00:00+00:00,deviation_km,40.09,1.0
+636018010,PATRIS,9766889,LBR,TANKER,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 05:00:00+00:00,deviation_km,32.65,1.0
+636018010,PATRIS,9766889,LBR,TANKER,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 07:00:00+00:00,deviation_km,32.47,1.0
+636018010,PATRIS,9766889,LBR,TANKER,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 18:00:00+00:00,deviation_km,3220.69,59.0
+636018010,PATRIS,9766889,LBR,TANKER,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 19:00:00+00:00,deviation_km,30.24,1.0
+636018010,PATRIS,9766889,LBR,TANKER,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 23:00:00+00:00,deviation_km,27.09,1.0
+636018010,PATRIS,9766889,LBR,TANKER,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 00:00:00+00:00,deviation_km,42.34,1.0
+636018010,PATRIS,9766889,LBR,TANKER,4,genuine_cluster_member,CONTROL,2026-01-17 03:00:00+00:00,cluster_radius_km,3.96,
+636025162,OCEAN CENTURY,,LBR,,1,trajectory_deviation_high,"CRISIS (Mar 19-24, 2026)",2026-03-22 09:00:00+00:00,deviation_km,437.52,63.0
+636025162,OCEAN CENTURY,,LBR,,2,trajectory_deviation_high,"CRISIS (Mar 19-24, 2026)",2026-03-22 23:00:00+00:00,deviation_km,119.83,5.0
+636025162,OCEAN CENTURY,,LBR,,3,genuine_cluster_member,CRISIS,2026-03-22 09:00:00+00:00,cluster_radius_km,2.95,
+636025162,OCEAN CENTURY,,LBR,,4,genuine_cluster_member,CRISIS,2026-03-19 08:00:00+00:00,cluster_radius_km,1.0,
+212851000,DUBAI VENTURE,9202259,CYP,CARGO,1,trajectory_deviation_high,"CRISIS (Mar 19-24, 2026)",2026-03-23 05:00:00+00:00,deviation_km,29.7,1.0
+212851000,DUBAI VENTURE,9202259,CYP,CARGO,2,genuine_cluster_member,CRISIS,2026-03-22 04:00:00+00:00,cluster_radius_km,2.77,
+212851000,DUBAI VENTURE,9202259,CYP,CARGO,3,genuine_cluster_member,CRISIS,2026-03-23 05:00:00+00:00,cluster_radius_km,1.56,
+229478000,KIRAN ANATOLIA,9650171,MLT,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 06:00:00+00:00,deviation_km,27.15,1.0
+229478000,KIRAN ANATOLIA,9650171,MLT,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 07:00:00+00:00,deviation_km,30.82,1.0
+229478000,KIRAN ANATOLIA,9650171,MLT,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 06:00:00+00:00,deviation_km,29.26,1.0
+229478000,KIRAN ANATOLIA,9650171,MLT,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 07:00:00+00:00,deviation_km,32.55,1.0
+229478000,KIRAN ANATOLIA,9650171,MLT,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 08:00:00+00:00,deviation_km,35.12,1.0
+229478000,KIRAN ANATOLIA,9650171,MLT,CARGO,3,genuine_cluster_member,CONTROL,2026-01-18 17:00:00+00:00,cluster_radius_km,3.33,
+351551000,GEM NO.5,9128192,DEU,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 07:00:00+00:00,deviation_km,34.7,1.0
+351551000,GEM NO.5,9128192,DEU,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 12:00:00+00:00,deviation_km,29.61,1.0
+351551000,GEM NO.5,9128192,DEU,CARGO,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 16:00:00+00:00,deviation_km,28.38,1.0
+352003690,HAKKAISAN,,PAN,OTHER,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 03:00:00+00:00,deviation_km,453.01,23.0
+352003690,HAKKAISAN,,PAN,OTHER,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 04:00:00+00:00,deviation_km,35.94,1.0
+352003690,HAKKAISAN,,PAN,OTHER,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 10:00:00+00:00,deviation_km,34.46,1.0
+352003690,HAKKAISAN,,PAN,OTHER,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 11:00:00+00:00,deviation_km,26.72,1.0
+352003690,HAKKAISAN,,PAN,OTHER,3,genuine_cluster_member,CONTROL,2026-01-17 02:00:00+00:00,cluster_radius_km,3.48,
+355400000,SAN FRANCISCO BRIDGE,9560364,PAN,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 03:00:00+00:00,deviation_km,27.68,1.0
+355400000,SAN FRANCISCO BRIDGE,9560364,PAN,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 04:00:00+00:00,deviation_km,39.84,1.0
+355400000,SAN FRANCISCO BRIDGE,9560364,PAN,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 05:00:00+00:00,deviation_km,34.51,1.0
+355400000,SAN FRANCISCO BRIDGE,9560364,PAN,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 06:00:00+00:00,deviation_km,40.31,1.0
+355400000,SAN FRANCISCO BRIDGE,9560364,PAN,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 13:00:00+00:00,deviation_km,597.53,29.0
+355400000,SAN FRANCISCO BRIDGE,9560364,PAN,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 14:00:00+00:00,deviation_km,39.19,1.0
+355400000,SAN FRANCISCO BRIDGE,9560364,PAN,CARGO,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 18:00:00+00:00,deviation_km,45.02,1.0
+374228000,KHALEJIA ANA 3,9164627,PAN,CARGO,1,genuine_cluster_member,CRISIS,2026-03-19 12:00:00+00:00,cluster_radius_km,1.0,
+374228000,KHALEJIA ANA 3,9164627,PAN,CARGO,2,genuine_cluster_member,CRISIS,2026-03-20 00:00:00+00:00,cluster_radius_km,2.78,
+374228000,KHALEJIA ANA 3,9164627,PAN,CARGO,3,genuine_cluster_member,CRISIS,2026-03-20 04:00:00+00:00,cluster_radius_km,3.59,
+538010037,CF ATHENA,9239886,MHL,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 08:00:00+00:00,deviation_km,37.82,1.0
+538010037,CF ATHENA,9239886,MHL,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-17 14:00:00+00:00,deviation_km,28.23,1.0
+538010037,CF ATHENA,9239886,MHL,CARGO,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 00:00:00+00:00,deviation_km,774.65,30.0
+538010037,CF ATHENA,9239886,MHL,CARGO,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 01:00:00+00:00,deviation_km,38.27,1.0
+538010037,CF ATHENA,9239886,MHL,CARGO,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 02:00:00+00:00,deviation_km,31.26,1.0
+538010037,CF ATHENA,9239886,MHL,CARGO,3,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 05:00:00+00:00,deviation_km,33.21,1.0
+538011816,KIRA OCEAN,9441398,MHL,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 11:00:00+00:00,deviation_km,26.28,1.0
+538011816,KIRA OCEAN,9441398,MHL,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 19:00:00+00:00,deviation_km,35.28,1.0
+538011816,KIRA OCEAN,9441398,MHL,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 20:00:00+00:00,deviation_km,32.43,1.0
+538011816,KIRA OCEAN,9441398,MHL,CARGO,3,genuine_cluster_member,CONTROL,2026-01-18 16:00:00+00:00,cluster_radius_km,0.67,
+620999314,SAMIA -1,9910715,COM,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-20 20:00:00+00:00,deviation_km,818.29,56.0
+620999314,SAMIA -1,9910715,COM,CARGO,2,genuine_cluster_member,CONTROL,2026-01-18 05:00:00+00:00,cluster_radius_km,0.97,
+620999314,SAMIA -1,9910715,COM,CARGO,3,genuine_cluster_member,CONTROL,2026-01-18 12:00:00+00:00,cluster_radius_km,1.32,
+620999392,ELIA,,COM,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-18 20:00:00+00:00,deviation_km,199.64,14.0
+620999392,ELIA,,COM,CARGO,2,genuine_cluster_member,CONTROL,2026-01-18 20:00:00+00:00,cluster_radius_km,3.41,
+620999392,ELIA,,COM,CARGO,3,genuine_cluster_member,CONTROL,2026-01-19 07:00:00+00:00,cluster_radius_km,8.96,
+620999680,SEA MIKAEEL,1040485,COM,CARGO,1,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 05:00:00+00:00,deviation_km,26.09,1.0
+620999680,SEA MIKAEEL,1040485,COM,CARGO,2,trajectory_deviation_high,"CONTROL (Jan 17-21, 2026)",2026-01-19 20:00:00+00:00,deviation_km,282.67,11.0
+620999680,SEA MIKAEEL,1040485,COM,CARGO,3,genuine_cluster_member,CONTROL,2026-01-18 13:00:00+00:00,cluster_radius_km,0.99,

@@ -1,0 +1,346 @@
+{
+  "region": "hormuz_control",
+  "generated_utc": "2026-09-07T07:34:02.940490+00:00",
+  "bbox": {
+    "min_lat": 25.5,
+    "max_lat": 27.0,
+    "min_lon": 55.5,
+    "max_lon": 57.5
+  },
+  "baseline_period": [
+    "2026-01-17",
+    "2026-01-21"
+  ],
+  "data_source": "cached raw: data/raw/hormuz_control_mar2026_sar_detections.csv + data/raw/hormuz_control_mar2026_ais_positions.csv",
+  "sar_ais_distance_calibration": {
+    "method": "GeoTrackNet-style percentile of the CONFIRMED same-vessel (identity-matched) nearest-AIS distance distribution; the full SAR population is a true-match + dark-vessel mixture and is reported only for context",
+    "percentile_choice": {
+      "matched_percentile": 50.0,
+      "matched_basis": "median offset of a confirmed same-vessel pair",
+      "likely_spoofed_percentile": 99.0,
+      "likely_spoofed_false_alarm_rate": 0.01,
+      "likely_spoofed_basis": "a-contrario: a confirmed pair exceeds this only FAR of the time"
+    },
+    "n_sar_detections": 234,
+    "n_pairs_with_distance": 234,
+    "n_confirmed_identity_pairs_pre_screen": 77,
+    "n_confirmed_identity_pairs": 65,
+    "misattribution_screen": {
+      "method": "src.sar_ais_quality.screen_identity_pairs -- bracket check (own AIS brackets the SAR pass yet stays > 15 km away, or no own AIS within +/-2 h) + alternative-vessel check (a different vessel <= 5 km from the SAR point and <= half the attributed distance)",
+      "runs_on": "every calibration (GFW SAR->MMSI mis-attribution is a general dense-traffic data-quality issue, not region-specific)",
+      "n_excluded_suspected_misattribution": 12,
+      "excluded_pairs": [
+        {
+          "sar_id": 121,
+          "matched_mmsi": 229865000,
+          "ship_name": "CMA CGM DAVAO",
+          "sar_timestamp": "2026-01-18 02:07:09+00:00",
+          "distance_km": 17.302,
+          "time_gap_h": 0.119,
+          "bracket_status": "elsewhere",
+          "nearest_own_bin_km": 16.346,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 611000226.0,
+          "best_alt_km": 2.284,
+          "reason": "bracket=elsewhere (own AIS brackets the SAR pass (bin before AND after) yet stays >= 16.3 km away throughout); alternative vessel 2.28 km from SAR point (<= 5 km and <= 0.5x the attributed 17.3 km)"
+        },
+        {
+          "sar_id": 126,
+          "matched_mmsi": 538010565,
+          "ship_name": "GOOD CARRY",
+          "sar_timestamp": "2026-01-18 02:07:09+00:00",
+          "distance_km": 11.994,
+          "time_gap_h": 0.119,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 10.717,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 620800211.0,
+          "best_alt_km": 3.188,
+          "reason": "alternative vessel 3.19 km from SAR point (<= 5 km and <= 0.5x the attributed 12.0 km)"
+        },
+        {
+          "sar_id": 205,
+          "matched_mmsi": 219216000,
+          "ship_name": "MAERSK BOSTON",
+          "sar_timestamp": "2026-01-18 02:07:09+00:00",
+          "distance_km": 16.652,
+          "time_gap_h": 0.119,
+          "bracket_status": "elsewhere",
+          "nearest_own_bin_km": 15.055,
+          "better_alt_exists": false,
+          "best_alt_mmsi": 229865000.0,
+          "best_alt_km": 5.906,
+          "reason": "bracket=elsewhere (own AIS brackets the SAR pass (bin before AND after) yet stays >= 15.1 km away throughout)"
+        },
+        {
+          "sar_id": 177,
+          "matched_mmsi": 305684000,
+          "ship_name": "NORDIA",
+          "sar_timestamp": "2026-01-18 02:07:09+00:00",
+          "distance_km": 14.551,
+          "time_gap_h": 0.119,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 10.205,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 422544600.0,
+          "best_alt_km": 0.999,
+          "reason": "alternative vessel 1.00 km from SAR point (<= 5 km and <= 0.5x the attributed 14.6 km)"
+        },
+        {
+          "sar_id": 15,
+          "matched_mmsi": 538011569,
+          "ship_name": "SHAN DONG XIN XIANG",
+          "sar_timestamp": "2026-01-20 14:25:09+00:00",
+          "distance_km": 13.113,
+          "time_gap_h": 0.419,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 3.73,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 538007153.0,
+          "best_alt_km": 0.998,
+          "reason": "alternative vessel 1.00 km from SAR point (<= 5 km and <= 0.5x the attributed 13.1 km)"
+        },
+        {
+          "sar_id": 7,
+          "matched_mmsi": 249009000,
+          "ship_name": "SEADANCER",
+          "sar_timestamp": "2026-01-20 14:25:09+00:00",
+          "distance_km": 12.701,
+          "time_gap_h": 0.419,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 11.15,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 538011569.0,
+          "best_alt_km": 1.494,
+          "reason": "alternative vessel 1.49 km from SAR point (<= 5 km and <= 0.5x the attributed 12.7 km)"
+        },
+        {
+          "sar_id": 12,
+          "matched_mmsi": 538007362,
+          "ship_name": "PACIFIC JULIA",
+          "sar_timestamp": "2026-01-20 14:25:09+00:00",
+          "distance_km": 13.495,
+          "time_gap_h": 0.419,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 4.485,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 477035300.0,
+          "best_alt_km": 2.287,
+          "reason": "alternative vessel 2.29 km from SAR point (<= 5 km and <= 0.5x the attributed 13.5 km)"
+        },
+        {
+          "sar_id": 31,
+          "matched_mmsi": 403590001,
+          "ship_name": "HABARI",
+          "sar_timestamp": "2026-01-20 14:25:09+00:00",
+          "distance_km": 15.886,
+          "time_gap_h": 0.419,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 6.315,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 538011569.0,
+          "best_alt_km": 4.57,
+          "reason": "alternative vessel 4.57 km from SAR point (<= 5 km and <= 0.5x the attributed 15.9 km)"
+        },
+        {
+          "sar_id": 173,
+          "matched_mmsi": 538007153,
+          "ship_name": "ELANDRA EAGLE",
+          "sar_timestamp": "2026-01-20 14:25:09+00:00",
+          "distance_km": 10.866,
+          "time_gap_h": 0.419,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 2.438,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 422038100.0,
+          "best_alt_km": 3.482,
+          "reason": "alternative vessel 3.48 km from SAR point (<= 5 km and <= 0.5x the attributed 10.9 km)"
+        },
+        {
+          "sar_id": 195,
+          "matched_mmsi": 538010888,
+          "ship_name": "FRONT OTRA",
+          "sar_timestamp": "2026-01-20 14:25:09+00:00",
+          "distance_km": 10.952,
+          "time_gap_h": 0.419,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 7.462,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 538007153.0,
+          "best_alt_km": 2.438,
+          "reason": "alternative vessel 2.44 km from SAR point (<= 5 km and <= 0.5x the attributed 11.0 km)"
+        },
+        {
+          "sar_id": 232,
+          "matched_mmsi": 352003258,
+          "ship_name": "GRAND MARINER",
+          "sar_timestamp": "2026-01-20 14:25:34+00:00",
+          "distance_km": 20.595,
+          "time_gap_h": 0.574,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 20.915,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 422405300.0,
+          "best_alt_km": 4.871,
+          "reason": "alternative vessel 4.87 km from SAR point (<= 5 km and <= 0.5x the attributed 20.6 km)"
+        },
+        {
+          "sar_id": 137,
+          "matched_mmsi": 419797000,
+          "ship_name": "DESH MAHIMA",
+          "sar_timestamp": "2026-01-20 14:25:34+00:00",
+          "distance_km": 14.855,
+          "time_gap_h": 0.426,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 8.634,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 477002400.0,
+          "best_alt_km": 4.134,
+          "reason": "alternative vessel 4.13 km from SAR point (<= 5 km and <= 0.5x the attributed 14.9 km)"
+        }
+      ],
+      "fraction_excluded": 0.156
+    },
+    "all_pairs_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.9935,
+      "p50": 4.3204,
+      "p75": 10.9302,
+      "p90": 22.7314,
+      "p95": 27.7258,
+      "p99": 32.0715,
+      "p99.9": 33.3694,
+      "max": 33.4176,
+      "mean": 7.7159,
+      "note": "MIXTURE (true matches + genuine dark vessels) -- not used for thresholds"
+    },
+    "pre_screen_confirmed_pair_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 2.8025,
+      "p75": 8.4635,
+      "p90": 14.0694,
+      "p95": 16.0391,
+      "p99": 21.7012,
+      "p99.9": 24.8527,
+      "max": 25.2029,
+      "mean": 5.3127
+    },
+    "pre_screen_derived_thresholds_km": {
+      "matched_max": 2.8025,
+      "likely_spoofed_min": 21.7012
+    },
+    "confirmed_pair_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 1.7868,
+      "p75": 5.62,
+      "p90": 8.6855,
+      "p95": 13.1057,
+      "p99": 18.9817,
+      "p99.9": 24.5808,
+      "max": 25.2029,
+      "mean": 3.6325
+    },
+    "derived_thresholds_km": {
+      "matched_max": 1.7868,
+      "likely_spoofed_min": 18.9817,
+      "discrepant_band": [
+        1.7868,
+        18.9817
+      ]
+    },
+    "likely_spoofed_tail_check": {
+      "p95_km": 13.1057,
+      "p99_km": 18.9817,
+      "p99_over_p95": 1.45,
+      "tukey_far_out_fence_km": 22.48,
+      "n_pairs_beyond_fence": 1,
+      "heavy_tail": false,
+      "note": "no gross outliers beyond the Tukey far-out fence; p99 is not tail-driven"
+    },
+    "confidence": "low",
+    "confidence_note": "only 65 confirmed identity pairs (< 200); this is a single short control window, not a multi-week baseline. The 99th percentile is near the sample maximum -- treat likely_spoofed_min as indicative. Pull a longer baseline and drop the false-alarm rate to 0.001 for an operational value."
+  },
+  "st_dbscan_calibration": {
+    "method_spatial": "Bai et al. adaptive DBSCAN: knee (Kneedle-lite) of the sorted 1-nearest contemporaneous inter-vessel distance curve, floored at 3.0 km",
+    "method_temporal": "ceil of the 90th percentile of the per-vessel successive-AIS-bin gap, floored at 2x temporal resolution",
+    "min_pts": 2,
+    "min_pts_note": "structural (single-linkage first stage), not region-scaled",
+    "n_ais_positions": 27194,
+    "n_vessels": 1081,
+    "n_contemporaneous_pairs": 27194,
+    "n_bin_gaps": 26111,
+    "nn_distance_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 1.999,
+      "p75": 3.8882,
+      "p90": 7.3098
+    },
+    "eps_spatial_candidates_km": {
+      "knee": 8.3467,
+      "p75": 3.8882,
+      "p90": 7.3098,
+      "mean_plus_1std": 6.5182
+    },
+    "eps_spatial_km": {
+      "chosen_method": "knee",
+      "knee_raw": 8.3467,
+      "floor_km": 3.0,
+      "value": 8.3467
+    },
+    "bin_gap_hours": {
+      "p50": 1.0,
+      "p90": 1.0,
+      "p99": 10.9
+    },
+    "eps_temporal_hours": {
+      "percentile_raw": 1.0,
+      "floor_hours": 2.0,
+      "value": 2.0
+    }
+  },
+  "derived_thresholds": {
+    "matched_km": 1.7868,
+    "likely_spoofed_km": 18.9817,
+    "eps_spatial_km": 8.3467,
+    "eps_temporal_hours": 2.0
+  },
+  "manual_comparison": {
+    "available": true,
+    "reference_source": "hand-calibrated Gulf values validated by eye (match.py 1.5/20 km, spatiotemporal_cluster.py 8 km / 2 h)",
+    "agree_ratio": 2.0,
+    "per_parameter": {
+      "matched_km": {
+        "derived": 1.7868,
+        "manual": 1.5,
+        "ratio_derived_over_manual": 1.191,
+        "abs_diff": 0.2868,
+        "verdict": "AGREES"
+      },
+      "likely_spoofed_km": {
+        "derived": 18.9817,
+        "manual": 20.0,
+        "ratio_derived_over_manual": 0.949,
+        "abs_diff": -1.0183,
+        "verdict": "AGREES"
+      },
+      "eps_spatial_km": {
+        "derived": 8.3467,
+        "manual": 8.0,
+        "ratio_derived_over_manual": 1.043,
+        "abs_diff": 0.3467,
+        "verdict": "AGREES"
+      },
+      "eps_temporal_hours": {
+        "derived": 2.0,
+        "manual": 2.0,
+        "ratio_derived_over_manual": 1.0,
+        "abs_diff": 0.0,
+        "verdict": "AGREES"
+      }
+    },
+    "overall": "AGREES"
+  }
+}

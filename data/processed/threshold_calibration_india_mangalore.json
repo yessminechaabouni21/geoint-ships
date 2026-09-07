@@ -1,0 +1,380 @@
+{
+  "region": "india_mangalore",
+  "generated_utc": "2026-09-07T07:34:10.102595+00:00",
+  "bbox": {
+    "min_lat": 12.0,
+    "max_lat": 13.8,
+    "min_lon": 73.8,
+    "max_lon": 75.2
+  },
+  "baseline_period": [
+    "2025-09-01",
+    "2025-10-12"
+  ],
+  "data_source": "cached raw: data/raw/india_mangalore_sep_oct2025_sar_detections.csv + data/raw/india_mangalore_sep_oct2025_ais_positions.csv",
+  "sar_ais_distance_calibration": {
+    "method": "GeoTrackNet-style percentile of the CONFIRMED same-vessel (identity-matched) nearest-AIS distance distribution; the full SAR population is a true-match + dark-vessel mixture and is reported only for context",
+    "percentile_choice": {
+      "matched_percentile": 50.0,
+      "matched_basis": "median offset of a confirmed same-vessel pair",
+      "likely_spoofed_percentile": 99.0,
+      "likely_spoofed_false_alarm_rate": 0.01,
+      "likely_spoofed_basis": "a-contrario: a confirmed pair exceeds this only FAR of the time"
+    },
+    "n_sar_detections": 778,
+    "n_pairs_with_distance": 778,
+    "n_confirmed_identity_pairs_pre_screen": 155,
+    "n_confirmed_identity_pairs": 139,
+    "misattribution_screen": {
+      "method": "src.sar_ais_quality.screen_identity_pairs -- bracket check (own AIS brackets the SAR pass yet stays > 15 km away, or no own AIS within +/-2 h) + alternative-vessel check (a different vessel <= 5 km from the SAR point and <= half the attributed distance)",
+      "runs_on": "every calibration (GFW SAR->MMSI mis-attribution is a general dense-traffic data-quality issue, not region-specific)",
+      "n_excluded_suspected_misattribution": 16,
+      "excluded_pairs": [
+        {
+          "sar_id": 355,
+          "matched_mmsi": 419950651,
+          "ship_name": "B.ISMAIL",
+          "sar_timestamp": "2025-09-06 00:48:40+00:00",
+          "distance_km": 97.538,
+          "time_gap_h": 0.189,
+          "bracket_status": "elsewhere",
+          "nearest_own_bin_km": 97.129,
+          "better_alt_exists": false,
+          "best_alt_mmsi": 419778000.0,
+          "best_alt_km": 37.573,
+          "reason": "bracket=elsewhere (own AIS brackets the SAR pass (bin before AND after) yet stays >= 97.1 km away throughout)"
+        },
+        {
+          "sar_id": 39,
+          "matched_mmsi": 419826316,
+          "ship_name": "SH",
+          "sar_timestamp": "2025-09-06 00:48:40+00:00",
+          "distance_km": 31.887,
+          "time_gap_h": 0.811,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 29.983,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419951269.0,
+          "best_alt_km": 0.0,
+          "reason": "alternative vessel 0.00 km from SAR point (<= 5 km and <= 0.5x the attributed 31.9 km)"
+        },
+        {
+          "sar_id": 243,
+          "matched_mmsi": 311060500,
+          "ship_name": "KUMASI",
+          "sar_timestamp": "2025-09-06 00:48:40+00:00",
+          "distance_km": 11.799,
+          "time_gap_h": 0.189,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 11.934,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419826316.0,
+          "best_alt_km": 2.435,
+          "reason": "alternative vessel 2.44 km from SAR point (<= 5 km and <= 0.5x the attributed 11.8 km)"
+        },
+        {
+          "sar_id": 195,
+          "matched_mmsi": 419951419,
+          "ship_name": "SEA BREEZ",
+          "sar_timestamp": "2025-09-11 00:56:45+00:00",
+          "distance_km": 84.467,
+          "time_gap_h": 0.054,
+          "bracket_status": "elsewhere",
+          "nearest_own_bin_km": 78.447,
+          "better_alt_exists": false,
+          "best_alt_mmsi": 563154900.0,
+          "best_alt_km": 30.343,
+          "reason": "bracket=elsewhere (own AIS brackets the SAR pass (bin before AND after) yet stays >= 78.4 km away throughout)"
+        },
+        {
+          "sar_id": 2,
+          "matched_mmsi": 419957089,
+          "ship_name": "SOLAR",
+          "sar_timestamp": "2025-09-11 00:56:45+00:00",
+          "distance_km": 26.433,
+          "time_gap_h": 0.054,
+          "bracket_status": "elsewhere",
+          "nearest_own_bin_km": 24.856,
+          "better_alt_exists": false,
+          "best_alt_mmsi": 419740312.0,
+          "best_alt_km": 5.664,
+          "reason": "bracket=elsewhere (own AIS brackets the SAR pass (bin before AND after) yet stays >= 24.9 km away throughout)"
+        },
+        {
+          "sar_id": 609,
+          "matched_mmsi": 419950202,
+          "ship_name": "ST JOHN",
+          "sar_timestamp": "2025-09-18 00:48:40+00:00",
+          "distance_km": 15.529,
+          "time_gap_h": 0.189,
+          "bracket_status": "elsewhere",
+          "nearest_own_bin_km": 15.529,
+          "better_alt_exists": false,
+          "best_alt_mmsi": 419951468.0,
+          "best_alt_km": 12.231,
+          "reason": "bracket=elsewhere (own AIS brackets the SAR pass (bin before AND after) yet stays >= 15.5 km away throughout)"
+        },
+        {
+          "sar_id": 528,
+          "matched_mmsi": 419824307,
+          "ship_name": "MAKARA DHWAJA1",
+          "sar_timestamp": "2025-09-18 00:48:40+00:00",
+          "distance_km": 14.356,
+          "time_gap_h": 5.811,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419343465.0,
+          "best_alt_km": 3.977,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 3.98 km from SAR point (<= 5 km and <= 0.5x the attributed 14.4 km)"
+        },
+        {
+          "sar_id": 326,
+          "matched_mmsi": 419956049,
+          "ship_name": "THAQWA",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 35.666,
+          "time_gap_h": 76.818,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419950111.0,
+          "best_alt_km": 3.109,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 3.11 km from SAR point (<= 5 km and <= 0.5x the attributed 35.7 km)"
+        },
+        {
+          "sar_id": 741,
+          "matched_mmsi": 419950103,
+          "ship_name": "VIKRAM",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 73.937,
+          "time_gap_h": 2.818,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": false,
+          "best_alt_mmsi": 419740068.0,
+          "best_alt_km": 6.212,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass)"
+        },
+        {
+          "sar_id": 506,
+          "matched_mmsi": 419951413,
+          "ship_name": "KANZ UL BAHR",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 23.881,
+          "time_gap_h": 1.818,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 24.463,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419740046.0,
+          "best_alt_km": 3.508,
+          "reason": "alternative vessel 3.51 km from SAR point (<= 5 km and <= 0.5x the attributed 23.9 km)"
+        },
+        {
+          "sar_id": 601,
+          "matched_mmsi": 419904736,
+          "ship_name": "AHANA MOL",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 11.239,
+          "time_gap_h": 2.818,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419950111.0,
+          "best_alt_km": 4.579,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 4.58 km from SAR point (<= 5 km and <= 0.5x the attributed 11.2 km)"
+        },
+        {
+          "sar_id": 49,
+          "matched_mmsi": 419950584,
+          "ship_name": "BAHRUNNOOR",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 11.172,
+          "time_gap_h": 2.818,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419950111.0,
+          "best_alt_km": 1.086,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 1.09 km from SAR point (<= 5 km and <= 0.5x the attributed 11.2 km)"
+        },
+        {
+          "sar_id": 127,
+          "matched_mmsi": 419950542,
+          "ship_name": "SEA HUNTER",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 12.8,
+          "time_gap_h": 2.818,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419738200.0,
+          "best_alt_km": 2.44,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 2.44 km from SAR point (<= 5 km and <= 0.5x the attributed 12.8 km)"
+        },
+        {
+          "sar_id": 610,
+          "matched_mmsi": 419951231,
+          "ship_name": "SULTHAN 2",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 10.105,
+          "time_gap_h": 2.818,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419738200.0,
+          "best_alt_km": 2.441,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 2.44 km from SAR point (<= 5 km and <= 0.5x the attributed 10.1 km)"
+        },
+        {
+          "sar_id": 559,
+          "matched_mmsi": 419950351,
+          "ship_name": "SHRESHTA",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 14.332,
+          "time_gap_h": 2.818,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419738200.0,
+          "best_alt_km": 3.109,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 3.11 km from SAR point (<= 5 km and <= 0.5x the attributed 14.3 km)"
+        },
+        {
+          "sar_id": 415,
+          "matched_mmsi": 419951396,
+          "ship_name": "AL AMEEN",
+          "sar_timestamp": "2025-09-18 00:49:05+00:00",
+          "distance_km": 11.775,
+          "time_gap_h": 1.182,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 15.925,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419281243.0,
+          "best_alt_km": 2.475,
+          "reason": "alternative vessel 2.47 km from SAR point (<= 5 km and <= 0.5x the attributed 11.8 km)"
+        }
+      ],
+      "fraction_excluded": 0.103
+    },
+    "all_pairs_percentiles_km": {
+      "p10": 2.4356,
+      "p25": 5.7134,
+      "p50": 14.1684,
+      "p75": 24.7974,
+      "p90": 31.7357,
+      "p95": 33.8196,
+      "p99": 38.9825,
+      "p99.9": 87.3822,
+      "max": 97.5383,
+      "mean": 15.7693,
+      "note": "MIXTURE (true matches + genuine dark vessels) -- not used for thresholds"
+    },
+    "pre_screen_confirmed_pair_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.7098,
+      "p50": 3.1552,
+      "p75": 7.4013,
+      "p90": 14.3464,
+      "p95": 20.3125,
+      "p99": 78.7809,
+      "p99.9": 95.5254,
+      "max": 97.5383,
+      "mean": 6.6534
+    },
+    "pre_screen_derived_thresholds_km": {
+      "matched_max": 3.1552,
+      "likely_spoofed_min": 78.7809
+    },
+    "confirmed_pair_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.4945,
+      "p50": 2.6434,
+      "p75": 5.7803,
+      "p90": 9.0518,
+      "p95": 12.6075,
+      "p99": 20.2469,
+      "p99.9": 20.3576,
+      "max": 20.3686,
+      "mean": 3.9163
+    },
+    "derived_thresholds_km": {
+      "matched_max": 2.6434,
+      "likely_spoofed_min": 20.2469,
+      "discrepant_band": [
+        2.6434,
+        20.2469
+      ]
+    },
+    "likely_spoofed_tail_check": {
+      "p95_km": 12.6075,
+      "p99_km": 20.2469,
+      "p99_over_p95": 1.61,
+      "tukey_far_out_fence_km": 21.6375,
+      "n_pairs_beyond_fence": 0,
+      "heavy_tail": false,
+      "note": "no gross outliers beyond the Tukey far-out fence; p99 is not tail-driven"
+    },
+    "confidence": "low",
+    "confidence_note": "only 139 confirmed identity pairs (< 200); this is a single short control window, not a multi-week baseline. The 99th percentile is near the sample maximum -- treat likely_spoofed_min as indicative. Pull a longer baseline and drop the false-alarm rate to 0.001 for an operational value."
+  },
+  "st_dbscan_calibration": {
+    "method_spatial": "Bai et al. adaptive DBSCAN: knee (Kneedle-lite) of the sorted 1-nearest contemporaneous inter-vessel distance curve, floored at 3.0 km",
+    "method_temporal": "ceil of the 90th percentile of the per-vessel successive-AIS-bin gap, floored at 2x temporal resolution",
+    "min_pts": 2,
+    "min_pts_note": "structural (single-linkage first stage), not region-scaled",
+    "n_ais_positions": 104933,
+    "n_vessels": 2842,
+    "n_contemporaneous_pairs": 104933,
+    "n_bin_gaps": 102090,
+    "nn_distance_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 1.112,
+      "p75": 3.437,
+      "p90": 8.5934
+    },
+    "eps_spatial_candidates_km": {
+      "knee": 8.9773,
+      "p75": 3.437,
+      "p90": 8.5934,
+      "mean_plus_1std": 10.47
+    },
+    "eps_spatial_km": {
+      "chosen_method": "knee",
+      "knee_raw": 8.9773,
+      "floor_km": 3.0,
+      "value": 8.9773
+    },
+    "bin_gap_hours": {
+      "p50": 1.0,
+      "p90": 6.0,
+      "p99": 180.0
+    },
+    "eps_temporal_hours": {
+      "percentile_raw": 6.0,
+      "floor_hours": 2.0,
+      "value": 6.0
+    }
+  },
+  "derived_thresholds": {
+    "matched_km": 2.6434,
+    "likely_spoofed_km": 20.2469,
+    "eps_spatial_km": 8.9773,
+    "eps_temporal_hours": 6.0
+  },
+  "manual_comparison": {
+    "available": false,
+    "status": "PROVISIONAL -- tail-outlier concern RESOLVED (automated); eps/geometry spot-check still outstanding",
+    "note": "No hand-calibrated thresholds exist for this region, so manual_reference stays unset and these values are not yet cleared for operational classification. RESOLVED: the SAR<->AIS mis-attribution / tail-outlier concern. calibrate_thresholds now auto-screens every identity pair (src.sar_ais_quality) and dropped 16 suspected-misattribution pair(s) this run BEFORE deriving the cutoffs; the likely_spoofed tail is no longer heavy (see likely_spoofed_tail_check).",
+    "resolved": [
+      "tail-outlier / GFW SAR->AIS mis-attribution: now screened automatically on every calibration run (bracket + alternative-vessel checks). Method validated 5/5 against the original India tail in src/inspect_india_tail_outliers.py."
+    ],
+    "remaining_checks_before_promotion": [
+      "Sample ~8-10 KEPT confirmed pairs (139 available) across the tiers on a folium map (SAR point + own +/-2 h track), same visual sanity check used for qatar_gnss_spoofing_oct2025 / hormuz_control; confirm near-cutoff 'matched' pairs are visibly the same vessel.",
+      "Sanity-check eps_spatial against the region's lane / anchorage geometry -- it must not bridge the inbound vs outbound approach lanes.",
+      "Sanity-check eps_temporal: New Mangalore's is 6 h (vs the Gulf's 2 h) from sparser AIS coverage -- confirm that reflects real coverage and note the effect on ST-DBSCAN temporal permissiveness.",
+      "Only after those, fill in manual_reference and drop the PROVISIONAL status."
+    ]
+  }
+}

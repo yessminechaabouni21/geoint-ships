@@ -1,0 +1,6 @@
+mmsi,ship_name,event_type,start,end,lat,lon,duration_hrs,confidence,port_id,port_name,port_flag,eez,avg_speed_kn,dist_from_shore_km
+374228000,KHALEJIA ANA 3,port_visit,2026-03-01 16:33:42+00:00,2026-03-02 04:07:56+00:00,25.3796,55.0628,11.570555555555556,4,are-dubai,DUBAI,ARE,United Arab Emirates,,24
+374228000,KHALEJIA ANA 3,port_visit,2026-03-02 05:26:51+00:00,2026-03-06 17:50:56+00:00,25.2757,55.2589,108.40138888888889,4,are-dubai,DUBAI,ARE,United Arab Emirates,,2
+374228000,KHALEJIA ANA 3,port_visit,2026-03-06 21:21:11+00:00,2026-03-07 22:04:03+00:00,25.0313,55.0677,24.714444444444446,4,are-jebelali,JEBEL ALI,ARE,United Arab Emirates,,2
+374228000,KHALEJIA ANA 3,port_visit,2026-03-15 09:17:20+00:00,2026-03-19 06:27:50+00:00,25.2489,55.2672,93.175,4,are-dubai,DUBAI,ARE,United Arab Emirates,,0
+374228000,KHALEJIA ANA 3,port_visit,2026-03-20 00:02:15+00:00,2026-03-21 17:20:34+00:00,26.0371,55.949,41.305277777777775,4,are-minasaqr,MINA SAQR,ARE,United Arab Emirates,,12

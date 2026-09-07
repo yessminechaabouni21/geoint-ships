@@ -272,6 +272,76 @@ def load_all_events(enabled=True, refresh=False):
     return cache
 
 
+def pull_deep_history(mmsi, ship_name=None, enabled=True, refresh=False,
+                      write_csv=True, do_report=True):
+    """Pull + cache the 6-month per-vessel event history for ONE mmsi and run
+    the baseline comparison for it. This is the tier-2 escalation entry point
+    used by src.watchlist_trigger; the CLI main() still handles the fixed
+    shortlist.
+
+    Returns a dict:
+      {mmsi, ok, csv_path, n_events, baseline, xref, identity_available, error}
+    `ok=False` (with `error`) means nothing was cached, so a later run retries.
+    """
+    mmsi = int(mmsi)
+    name = ship_name or SHORTLIST.get(mmsi) or str(mmsi)
+    SHORTLIST.setdefault(mmsi, name)  # events_to_frame / build_baseline need it
+
+    cache = {}
+    if Path(DEEP_CACHE_PATH).exists() and not refresh:
+        try:
+            cache = json.loads(Path(DEEP_CACHE_PATH).read_text())
+        except json.JSONDecodeError:
+            cache = {}
+
+    if refresh or str(mmsi) not in cache:
+        if not enabled:
+            return {"mmsi": mmsi, "ok": False, "error": "gfw disabled and mmsi not cached"}
+        if not GFW_API_TOKEN:
+            return {"mmsi": mmsi, "ok": False, "error": "GFW_API_TOKEN not set"}
+        sess = _session()
+        ident = resolve_vessel(sess, mmsi)
+        vid = ident.get("vessel_id")
+        if not vid:
+            # record the miss so we don't hammer it, but report not-ok
+            cache[str(mmsi)] = {"identity": ident, "events": {}, "track_probe": None,
+                                "baseline_period": [BASELINE_START, BASELINE_END]}
+            Path(DEEP_CACHE_PATH).write_text(json.dumps(cache, indent=1))
+            return {"mmsi": mmsi, "ok": False, "identity_available": False,
+                    "error": "no GFW vessel id for this MMSI"}
+        track_probe = probe_track_endpoint(sess, vid)
+        events = {}
+        for kind, ds in EVENT_DATASETS.items():
+            events[kind] = fetch_events(sess, vid, kind, ds)
+        cache[str(mmsi)] = {"identity": ident, "events": events,
+                            "track_probe": track_probe,
+                            "baseline_period": [BASELINE_START, BASELINE_END]}
+        Path(DEEP_CACHE_PATH).write_text(json.dumps(cache, indent=1))
+
+    blob = cache[str(mmsi)]
+    df = events_to_frame(mmsi, blob)
+    csv_path = f"{PROC}/vessel_deep_history_{mmsi}.csv"
+    if write_csv and not df.empty:
+        df.to_csv(csv_path, index=False)
+
+    baseline = xref = None
+    if not df.empty:
+        baseline = build_baseline(mmsi, blob, df)
+        flags = load_incident_flags(mmsi)
+        xref = cross_reference(baseline, flags)
+        if do_report:
+            report_vessel(baseline, flags, xref)
+
+    return {
+        "mmsi": mmsi, "ok": not df.empty,
+        "csv_path": csv_path if (write_csv and not df.empty) else None,
+        "n_events": int(len(df)),
+        "identity_available": bool(blob.get("identity", {}).get("identity_available")),
+        "baseline": baseline, "xref": xref,
+        "error": None if not df.empty else "no events returned for this MMSI",
+    }
+
+
 # ==========================================================================
 # Geometry / small helpers
 # ==========================================================================

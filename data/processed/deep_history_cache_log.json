@@ -1,0 +1,266 @@
+{
+ "212851000": {
+  "first_pulled": "2026-09-06T16:24:04+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_212851000.csv",
+  "last_pull_n_events": 138,
+  "last_pull_reading": "(b) persistent",
+  "last_pulled": "2026-09-06T16:24:04+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 2,
+  "ship_name": "DUBAI VENTURE"
+ },
+ "244811000": {
+  "first_pulled": "2026-09-06T16:24:04+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_244811000.csv",
+  "last_pull_n_events": 142,
+  "last_pull_reading": "(a)/(b) mixed",
+  "last_pulled": "2026-09-06T16:24:04+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 2,
+  "ship_name": "COASTAL VICTORY"
+ },
+ "306531000": {
+  "first_pulled": "2026-09-06T16:24:04+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_306531000.csv",
+  "last_pull_n_events": 8,
+  "last_pull_reading": "outside_baseline",
+  "last_pulled": "2026-09-06T16:24:04+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 2,
+  "ship_name": "LENORE"
+ },
+ "314001097": {
+  "first_pulled": "2026-09-06T16:24:04+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_314001097.csv",
+  "last_pull_n_events": 19,
+  "last_pull_reading": "(a) ordinary",
+  "last_pulled": "2026-09-06T16:24:04+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 2,
+  "ship_name": "NEW VENTURE"
+ },
+ "314001120": {
+  "first_pulled": "2026-09-06T16:25:25+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_314001120.csv",
+  "last_pull_n_events": 18,
+  "last_pull_reading": "(a)/(b) mixed",
+  "last_pulled": "2026-09-06T16:25:25+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 1,
+  "ship_name": "AN LI"
+ },
+ "314109000": {
+  "first_pulled": "2026-09-06T16:25:25+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_314109000.csv",
+  "last_pull_n_events": 34,
+  "last_pull_reading": "(a) ordinary",
+  "last_pulled": "2026-09-06T16:25:25+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 1,
+  "ship_name": "NORTH STAR"
+ },
+ "341036002": {
+  "first_pulled": "2026-09-06T16:25:25+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_341036002.csv",
+  "last_pull_n_events": 24,
+  "last_pull_reading": "(a) ordinary",
+  "last_pulled": "2026-09-06T16:25:25+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 1,
+  "ship_name": "PORTLAND IV"
+ },
+ "341348002": {
+  "first_pulled": "2026-09-06T16:25:25+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pull_csv": "data/processed/vessel_deep_history_341348002.csv",
+  "last_pull_n_events": 67,
+  "last_pull_reading": "(a) ordinary",
+  "last_pulled": "2026-09-06T16:25:25+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 1,
+  "ship_name": "MEHRAN 1"
+ },
+ "341481002": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_341481002.csv",
+  "last_pull_n_events": 12,
+  "last_pull_reading": "(a) ordinary",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "ZOYA"
+ },
+ "352001905": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_352001905.csv",
+  "last_pull_n_events": 39,
+  "last_pull_reading": "(a)/(b) mixed",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "FATIMA 2"
+ },
+ "352004177": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_352004177.csv",
+  "last_pull_n_events": 47,
+  "last_pull_reading": "(a) ordinary",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "BAOYING GLORY"
+ },
+ "352753000": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_352753000.csv",
+  "last_pull_n_events": 24,
+  "last_pull_reading": "(a)/(b) mixed",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "FRANBO PROGRESS"
+ },
+ "374228000": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_374228000.csv",
+  "last_pull_n_events": 5,
+  "last_pull_reading": "(b) persistent",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "KHALEJIA ANA 3"
+ },
+ "408687000": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_408687000.csv",
+  "last_pull_n_events": 68,
+  "last_pull_reading": "(b) persistent",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "BAK-20"
+ },
+ "408883000": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_408883000.csv",
+  "last_pull_n_events": 67,
+  "last_pull_reading": "(a)/(b) mixed",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "BAK 10"
+ },
+ "419001387": {
+  "first_pulled": "2026-09-07T04:33:07+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "fresh_pull",
+  "last_pull_csv": "data/processed/vessel_deep_history_419001387.csv",
+  "last_pull_n_events": 36,
+  "last_pull_reading": "(a) ordinary",
+  "last_pulled": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "JAG VASANT"
+ },
+ "511101414": {
+  "first_pulled": "2026-09-06T08:12:59+00:00",
+  "flagged_windows": [],
+  "last_decision": "bootstrap_from_existing_file",
+  "last_pulled": "2026-09-06T08:12:59+00:00",
+  "last_reflag": null,
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "SELENIA"
+ },
+ "636018010": {
+  "first_pulled": "2026-09-06T08:12:59+00:00",
+  "flagged_windows": [],
+  "last_decision": "bootstrap_from_existing_file",
+  "last_pulled": "2026-09-06T08:12:59+00:00",
+  "last_reflag": null,
+  "pull_count": 1,
+  "reflag_count": 0,
+  "ship_name": "PATRIS"
+ },
+ "636025162": {
+  "first_pulled": "2026-09-06T08:13:00+00:00",
+  "flagged_windows": [
+   "hormuz_crisis_mar2026"
+  ],
+  "last_decision": "cache_skip",
+  "last_pulled": "2026-09-06T08:13:00+00:00",
+  "last_reflag": "2026-09-07T04:33:07+00:00",
+  "pull_count": 1,
+  "reflag_count": 3,
+  "ship_name": "OCEAN CENTURY"
+ }
+}
