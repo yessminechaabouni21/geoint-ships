@@ -1,0 +1,30 @@
+{
+ "306531000": {
+  "name_seen": "LENORE",
+  "imo": "9259367",
+  "built_year": 2004,
+  "source": "web_search 2026-09-07: vesselfinder / trusteddocks / myshiptracking / vesseltracker all report built 2004 (crude/products tanker). GFW builtYear null.",
+  "resolved_utc": "2026-09-07"
+ },
+ "511101414": {
+  "name_seen": "SELENIA",
+  "imo": "9286437",
+  "built_year": 2004,
+  "source": "web_search 2026-09-07: maritimeoptima / marinepublic / vesselfinder / trusteddocks / myshiptracking all report built 2004 (asphalt/bitumen tanker, LOA 110 m). IMO not in GFW data; resolved via MMSI 511101414.",
+  "resolved_utc": "2026-09-07"
+ },
+ "636018010": {
+  "name_seen": "PATRIS",
+  "imo": "9766889",
+  "built_year": 2018,
+  "source": "web_search 2026-09-07: vesselfinder / fleetmon / shipspotting / maritimeoptima. LNG carrier, Daewoo (DSME) Okpo, launched 2018-01-18. GFW builtYear null.",
+  "resolved_utc": "2026-09-07"
+ },
+ "636025162": {
+  "name_seen": "OCEAN CENTURY",
+  "imo": "9435650",
+  "built_year": 2007,
+  "source": "web_search 2026-09-07: vesseltracker / vesselfinder / marinetraffic listing agree built 2007 (vessel is a TUG, not a tanker). IMO not in GFW data; resolved via MMSI 636025162.",
+  "resolved_utc": "2026-09-07"
+ }
+}

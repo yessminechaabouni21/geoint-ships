@@ -356,7 +356,7 @@ def fig_bugs_timeline():
 # 5. Reliability-score breakdown (stacked bar, v3 values)
 # ======================================================================
 def fig_score_breakdown():
-    src = f"{PROC}/vessel_reliability_scores_v3.csv"
+    src = f"{PROC}/vessel_reliability_scores_v4.csv"
     df = pd.read_csv(src)
     want = ["SELENIA", "PATRIS", "OCEAN CENTURY"]
     df = df[df["ship_name"].isin(want)].set_index("ship_name").loc[want]
@@ -376,7 +376,8 @@ def fig_score_breakdown():
     b3 = ax.bar(x, age, w, bottom=beh + foc, label="vessel age",
                 color=PALETTE["age"], edgecolor="white", linewidth=1.2)
 
-    for xi, (be, fo, tot) in enumerate(zip(beh, foc, total)):
+    ages = df["vessel_age_years"].to_numpy(float)
+    for xi, (be, fo, ag, agey, tot) in enumerate(zip(beh, foc, age, ages, total)):
         ax.text(xi, tot + 1.6, f"{tot:.0f}", ha="center", va="bottom",
                 fontsize=15, fontweight="bold")
         ax.text(xi, be / 2, f"{be:.0f}", ha="center", va="center",
@@ -384,18 +385,26 @@ def fig_score_breakdown():
         if fo > 0:
             ax.text(xi, be + fo / 2, f"{fo:.0f}", ha="center", va="center",
                     color=PALETTE["ink"], fontsize=11, fontweight="bold")
+        if ag > 0:
+            ax.text(xi, be + fo + ag / 2, f"{ag:.0f}", ha="center", va="center",
+                    color="white", fontsize=11, fontweight="bold")
 
+    def _blt(agey):
+        return (f"built {2026 - int(agey)} · {int(agey)} yr"
+                if not np.isnan(agey) else "build year unresolved")
     ax.set_xticks(x)
-    ax.set_xticklabels([f"{s}\n({m})" for s, m in zip(want, df["mmsi"])])
+    ax.set_xticklabels([f"{s}\n({m})\n{_blt(a)}"
+                        for s, m, a in zip(want, df["mmsi"], ages)])
     ax.set_ylabel("reliability score  (0–100, higher = more concerning)")
-    ax.set_ylim(0, 100)
-    ax.set_title("Reliability score breakdown (v3): behavioral + FOC + age components")
+    ax.set_ylim(0, 112)
+    ax.set_title("Reliability score breakdown (v4): behavioral + FOC + age components")
     ax.legend(loc="upper right", frameon=True)
     ax.grid(axis="x", visible=False)
-    ax.text(0.005, -0.155,
-            f"source: {src}.  age component is 0 for all three (GFW built-year unavailable / not >15 yr).\n"
-            "behavioral is identical (60) — all three were flagged 4× in one window; FOC is what separates "
-            "SELENIA (shadow-fleet flag, +20) from PATRIS / OCEAN CENTURY (ITF-FOC only, +5).",
+    ax.text(0.005, -0.17,
+            f"source: {src}.  build years from vessel_age_cache.json (GFW builtYear null for this whole fleet).\n"
+            "behavioral is identical (60) — all three flagged 4× in one window.  FOC separates SELENIA "
+            "(shadow-fleet flag, +20) from PATRIS / OCEAN CENTURY (ITF-FOC only, +5).  age>15 yr now adds +20 "
+            "to SELENIA (22 yr) and OCEAN CENTURY (19 yr); PATRIS (8 yr) is genuinely young and scores 0 there.",
             transform=ax.transAxes, fontsize=9.5, color=PALETTE["muted"], linespacing=1.5)
     return save(fig, "vessel_score_breakdown.png")
 

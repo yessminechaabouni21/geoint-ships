@@ -13,9 +13,21 @@ references GFW vessel-identity data for static risk factors, and produces
 one explainable 0-100 score per vessel.
 
 Read-only w.r.t. the pipeline: it consumes saved CSVs and the GFW identity
-API. It writes data/processed/vessel_reliability_scores_v3.csv (+ an identity
-cache) and leaves the v1 and v2 files (vessel_reliability_scores.csv,
-vessel_reliability_scores_v2.csv) untouched for comparison.
+API. It writes data/processed/vessel_reliability_scores_v4.csv (+ an identity
+cache) and leaves the v1, v2 and v3 files untouched for comparison.
+
+v4 fixes the vessel-age component. GFW's registry `builtYear` is unpopulated
+for every vessel in this fleet (confirmed gap), so the age>15yr component had
+been contributing 0 to every score. v4 adds a second build-year source:
+data/processed/vessel_age_cache.json, a manually-curated cache (same one-off,
+cache-once philosophy as gfw_identity_cache.json) of build years resolved by
+IMO / MMSI from public vessel-registry pages. When GFW's builtYear is null the
+cache value is used; `built_year_source` records which. NOTE: the cache is
+populated by manual lookup only -- Equasis (the IMO-endorsed registry) forbids
+API / automated extraction / bulk download / storage under its Conditions of
+Registration, and MarineTraffic / VesselFinder block automated access, so a
+fleet-wide sweep is not permissible. It currently covers the vessels needed
+for the reliability figure plus LENORE.
 
 v3 makes the FOC component two-tier: a flag in the narrow, specifically-cited
 SHADOW_FLEET_FLAGS list keeps the full +20; a flag in the broad ITF_FOC_FLAGS
@@ -47,8 +59,10 @@ from src.config import GFW_API_BASE_URL, GFW_API_TOKEN
 PROC = "data/processed"
 OUTPUT_FILE = f"{PROC}/vessel_reliability_scores.csv"        # v1 -- left untouched
 OUTPUT_FILE_V2 = f"{PROC}/vessel_reliability_scores_v2.csv"  # v2 -- left untouched
-OUTPUT_FILE_V3 = f"{PROC}/vessel_reliability_scores_v3.csv"  # written by this module
+OUTPUT_FILE_V3 = f"{PROC}/vessel_reliability_scores_v3.csv"  # v3 -- left untouched
+OUTPUT_FILE_V4 = f"{PROC}/vessel_reliability_scores_v4.csv"  # written by this module
 GFW_CACHE_PATH = f"{PROC}/gfw_identity_cache.json"
+AGE_CACHE_PATH = f"{PROC}/vessel_age_cache.json"
 
 # --------------------------------------------------------------------------
 # The four distinct time windows, in chronological order. `key` is the id
@@ -432,6 +446,20 @@ def _save_cache(cache):
     Path(GFW_CACHE_PATH).write_text(json.dumps(cache, indent=1, sort_keys=True))
 
 
+def _load_age_cache():
+    """MMSI(str) -> {imo, built_year, source, ...}. Manually-curated fallback
+    build years for when GFW's registry builtYear is null (which is every
+    vessel in this fleet). See the module docstring for why this cannot be a
+    fleet-wide automated lookup."""
+    p = Path(AGE_CACHE_PATH)
+    if p.exists():
+        try:
+            return json.loads(p.read_text())
+        except json.JSONDecodeError:
+            return {}
+    return {}
+
+
 def _extract_identity(payload):
     entries = payload.get("entries") or []
     if not entries:
@@ -639,7 +667,8 @@ def _csv_type_map():
     return tmap
 
 
-def score_vessels(vessels, cache, names, csv_flags, csv_types):
+def score_vessels(vessels, cache, names, csv_flags, csv_types, age_cache=None):
+    age_cache = age_cache or {}
     out = vessels.copy()
     out["ship_name"] = out["mmsi"].map(names)
 
@@ -734,9 +763,28 @@ def score_vessels(vessels, cache, names, csv_flags, csv_types):
         default=0.0,
     )
 
-    # --- component 3: vessel age ---
-    by = pd.to_numeric(out["gfw_built_year"], errors="coerce")
-    age = CURRENT_YEAR - by
+    # --- component 3: vessel age (v4: GFW builtYear -> age-cache fallback) ---
+    # GFW's registry builtYear is null for every vessel in this fleet, so v1-v3
+    # scored age 0 across the board. v4 falls back to vessel_age_cache.json
+    # (manually resolved by IMO/MMSI from public registry pages) when GFW is
+    # null. resolved_imo does the same for the IMO column. built_year_source
+    # records provenance so the fallback is never silent.
+    gfw_by = pd.to_numeric(out["gfw_built_year"], errors="coerce")
+
+    def _ac(m):
+        return age_cache.get(str(int(m)), {}) if pd.notna(m) else {}
+
+    cache_by = out["mmsi"].map(lambda m: _ac(m).get("built_year"))
+    cache_by = pd.to_numeric(cache_by, errors="coerce")
+    cache_imo = out["mmsi"].map(lambda m: _ac(m).get("imo"))
+
+    out["resolved_built_year"] = gfw_by.where(gfw_by.notna(), cache_by)
+    out["built_year_source"] = np.where(
+        gfw_by.notna(), "gfw",
+        np.where(cache_by.notna(), "age_cache", "none"))
+    out["resolved_imo"] = out["gfw_imo"].where(out["gfw_imo"].notna(), cache_imo)
+
+    age = CURRENT_YEAR - out["resolved_built_year"]
     out["vessel_age_years"] = age
     out["age_over_15yr"] = np.where(age.notna(), age > AGE_THRESHOLD_YEARS, None)
     out["age_score"] = np.where(age.notna() & (age > AGE_THRESHOLD_YEARS), W_AGE, 0.0)
@@ -786,8 +834,9 @@ COLUMN_ORDER = [
     "resolved_vessel_type", "vessel_type_source", "vessel_type_caveat",
     "gfw_shiptype", "gfw_geartype",
     "foc_match", "foc_list", "foc_list_matched",
-    "gfw_built_year", "vessel_age_years", "age_over_15yr",
-    "gfw_owner", "gfw_owner_flag", "gfw_imo", "gfw_iuu_status",
+    "gfw_built_year", "resolved_built_year", "built_year_source",
+    "vessel_age_years", "age_over_15yr",
+    "gfw_owner", "gfw_owner_flag", "gfw_imo", "resolved_imo", "gfw_iuu_status",
     "behavioral_score", "behavioral_multiplier", "behavioral_score_adjusted",
     "foc_score", "age_score",
     "reliability_score_no_caveat", "reliability_score",
@@ -1017,12 +1066,13 @@ def main():
     cache = {} if args.refresh_gfw else _load_cache()
     cache = gfw_lookup(to_lookup, cache, enabled=not args.no_gfw,
                        refresh=args.refresh_gfw, max_lookups=args.max_gfw)
+    age_cache = _load_age_cache()
 
     scored = score_vessels(vessels, cache, _name_map(),
-                           _csv_flag_map(), _csv_type_map())
+                           _csv_flag_map(), _csv_type_map(), age_cache=age_cache)
 
     Path(PROC).mkdir(parents=True, exist_ok=True)
-    scored[COLUMN_ORDER].to_csv(OUTPUT_FILE_V3, index=False)
+    scored[COLUMN_ORDER].to_csv(OUTPUT_FILE_V4, index=False)
     report(scored)
 
     n_gfw = int(scored["gfw_identity_available"].sum())
@@ -1039,17 +1089,23 @@ def main():
           "up, plus a few API misses).")
     n_shadow = int((scored["foc_list_matched"] == "shadow_fleet").sum())
     n_itf_only = int((scored["foc_list_matched"] == "itf_foc_only").sum())
+    n_age_gfw = int((scored["built_year_source"] == "gfw").sum())
+    n_age_cache = int((scored["built_year_source"] == "age_cache").sum())
+    n_imo = int(scored["resolved_imo"].notna().sum())
     print(f"  Static factors: {n_foc} vessels carry a flag-of-convenience flag "
           f"({n_shadow} shadow_fleet +{int(W_FOC_SHADOW)}, {n_itf_only} itf_foc_only "
-          f"+{int(W_FOC_ITF_ONLY)}); build year available for only {n_age} vessels.")
+          f"+{int(W_FOC_ITF_ONLY)}).")
+    print(f"  Build year: {n_age} of {n_imo} vessels-with-an-IMO resolved "
+          f"({n_age_gfw} from GFW, {n_age_cache} from vessel_age_cache.json). "
+          f"{int((scored['age_score'] > 0).sum())} score the age>15yr +{int(W_AGE)}.")
     if n_age == 0:
-        print("    -> the age>15yr component contributed 0 to every score this run "
-              "(GFW's registry builtYear is unpopulated for this fleet).")
+        print("    -> the age>15yr component contributed 0 to every score this run.")
     print(f"  Vessel type: {n_type} vessels have some type string, but only "
           f"~{n_specific} are more specific than a broad bucket; "
           f"{n_cav} matched the small-utility-craft caveat.")
-    print(f"  v1 + v2 files left untouched: {OUTPUT_FILE} , {OUTPUT_FILE_V2}")
-    print(f"  v3 table ({len(scored)} vessels) -> {OUTPUT_FILE_V3}")
+    print(f"  v1 + v2 + v3 files left untouched: {OUTPUT_FILE} , "
+          f"{OUTPUT_FILE_V2} , {OUTPUT_FILE_V3}")
+    print(f"  v4 table ({len(scored)} vessels) -> {OUTPUT_FILE_V4}")
 
 
 if __name__ == "__main__":
