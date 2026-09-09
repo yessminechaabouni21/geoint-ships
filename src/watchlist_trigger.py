@@ -50,6 +50,7 @@ import pandas as pd
 
 from src import vessel_history as vh
 from src import vessel_deep_history as vdh
+from src import loiter_detector as ld
 
 PROC = "data/processed"
 CACHE_LOG = f"{PROC}/deep_history_cache_log.json"
@@ -69,12 +70,18 @@ KNOWN_VESSELS = {
     636025162: "OCEAN CENTURY",
 }
 
-# The three tier-1 thresholds, mapped from the event_type strings that
-# vessel_history.load_events() emits.
+# The tier-1 thresholds, mapped from the event_type strings that
+# vessel_history.load_events() -- and src.loiter_detector.load_loiter_events()
+# -- emit. `prolonged_dwell_at_flagged_facility` was added after the
+# TIBURON / SEASONS I stress test showed a multi-day stationary hold at a
+# sanctioned refinery produced ZERO flags from the spoofing / deviation /
+# cluster chain (an idle vessel has ~0 km trajectory deviation and never
+# enters ST-DBSCAN). See src/loiter_detector.py.
 THRESHOLD_OF = {
     "sar_ais_likely_spoofed": "likely_spoofed (SAR-vs-AIS)",
     "trajectory_deviation_high": "high-tier trajectory deviation",
     "genuine_cluster_member": "genuine_multivessel_coherence cluster",
+    "prolonged_dwell_at_flagged_facility": "prolonged dwell at flagged facility",
 }
 
 
@@ -105,6 +112,17 @@ def flagged_vessels(window_key):
     reported separately and never escalated."""
     events = vh.load_events()
     names = vh._name_map()
+
+    # Additional tier-1 category: prolonged stationary dwell at a flagged
+    # facility (src.loiter_detector). Present only for windows that have a
+    # data/processed/loiter_flags_{window}.csv on disk; contributes nothing
+    # otherwise, so existing windows are unaffected unless a flags file is
+    # generated for them.
+    loiter = ld.load_loiter_events(window_key)
+    if len(loiter):
+        events = pd.concat([events, loiter], ignore_index=True)
+        names = {**ld.name_map(window_key), **names}
+
     if window_key not in set(events["window"]):
         raise SystemExit(
             f"no screening events for window '{window_key}'. "

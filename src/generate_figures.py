@@ -356,12 +356,14 @@ def fig_bugs_timeline():
 # 5. Reliability-score breakdown (stacked bar, v3 values)
 # ======================================================================
 def fig_score_breakdown():
-    src = f"{PROC}/vessel_reliability_scores_v4.csv"
+    src = f"{PROC}/vessel_reliability_scores_v6.csv"
     df = pd.read_csv(src)
     want = ["SELENIA", "PATRIS", "OCEAN CENTURY"]
     df = df[df["ship_name"].isin(want)].set_index("ship_name").loc[want]
 
     beh = df["behavioral_score_adjusted"].to_numpy(float)
+    beh_raw = df["behavioral_score"].to_numpy(float)
+    mult = df["behavioral_multiplier"].to_numpy(float)
     foc = df["foc_score"].to_numpy(float)
     age = df["age_score"].to_numpy(float)
     total = df["reliability_score"].to_numpy(float)
@@ -377,7 +379,8 @@ def fig_score_breakdown():
                 color=PALETTE["age"], edgecolor="white", linewidth=1.2)
 
     ages = df["vessel_age_years"].to_numpy(float)
-    for xi, (be, fo, ag, agey, tot) in enumerate(zip(beh, foc, age, ages, total)):
+    for xi, (be, br, mu, fo, ag, agey, tot) in enumerate(
+            zip(beh, beh_raw, mult, foc, age, ages, total)):
         ax.text(xi, tot + 1.6, f"{tot:.0f}", ha="center", va="bottom",
                 fontsize=15, fontweight="bold")
         ax.text(xi, be / 2, f"{be:.0f}", ha="center", va="center",
@@ -388,24 +391,37 @@ def fig_score_breakdown():
         if ag > 0:
             ax.text(xi, be + fo + ag / 2, f"{ag:.0f}", ha="center", va="center",
                     color="white", fontsize=11, fontweight="bold")
+        if mu < 1.0:
+            ax.annotate(
+                f"confirmed tug → v2 small-utility-craft\n"
+                f"down-weight:  behavioral {br:.0f} × {mu:g} = {be:.0f}",
+                xy=(xi, be), xytext=(xi, 50),
+                ha="center", va="center", fontsize=10, color=PALETTE["bad"],
+                arrowprops=dict(arrowstyle="-|>", color=PALETTE["bad"], lw=1.4),
+                bbox=dict(boxstyle="round,pad=0.4", fc="white",
+                          ec=PALETTE["bad"], lw=1.1))
 
     def _blt(agey):
-        return (f"built {2026 - int(agey)} · {int(agey)} yr"
-                if not np.isnan(agey) else "build year unresolved")
+        return (f"built {2026 - int(agey)}, {int(agey)} yr"
+                if not np.isnan(agey) else "build year n/a")
     ax.set_xticks(x)
-    ax.set_xticklabels([f"{s}\n({m})\n{_blt(a)}"
+    ax.set_xticklabels([f"{s}\n({m})   {_blt(a)}"
                         for s, m, a in zip(want, df["mmsi"], ages)])
     ax.set_ylabel("reliability score  (0–100, higher = more concerning)")
     ax.set_ylim(0, 112)
-    ax.set_title("Reliability score breakdown (v4): behavioral + FOC + age components")
+    ax.set_xlim(-0.62, len(want) - 0.38)
+    ax.set_title("Reliability score breakdown (v6): behavioral + FOC + age components")
     ax.legend(loc="upper right", frameon=True)
     ax.grid(axis="x", visible=False)
-    ax.text(0.005, -0.17,
-            f"source: {src}.  build years from vessel_age_cache.json (GFW builtYear null for this whole fleet).\n"
-            "behavioral is identical (60) — all three flagged 4× in one window.  FOC separates SELENIA "
-            "(shadow-fleet flag, +20) from PATRIS / OCEAN CENTURY (ITF-FOC only, +5).  age>15 yr now adds +20 "
-            "to SELENIA (22 yr) and OCEAN CENTURY (19 yr); PATRIS (8 yr) is genuinely young and scores 0 there.",
-            transform=ax.transAxes, fontsize=9.5, color=PALETTE["muted"], linespacing=1.5)
+    cap = (
+        f"source: {src}.  build years from vessel_age_cache.json (GFW builtYear null for this whole fleet).\n"
+        "All three flagged 4× in one CRISIS window (raw behavioral 60).  FOC separates SELENIA (shadow-fleet flag,\n"
+        "+20) from PATRIS / OCEAN CENTURY (ITF-FOC only, +5).  age>15 yr adds +20 to SELENIA (22 yr) and OCEAN\n"
+        "CENTURY (19 yr); PATRIS (8 yr) is genuinely young.  OCEAN CENTURY is a confirmed tug — its behavioral\n"
+        "component takes the v2 ×0.25 small-utility-craft down-weight (60→15), dropping it from #2 to #37 fleet-wide."
+    )
+    ax.text(0.005, -0.30, cap, transform=ax.transAxes, fontsize=9.5,
+            color=PALETTE["muted"], linespacing=1.5)
     return save(fig, "vessel_score_breakdown.png")
 
 

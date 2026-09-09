@@ -13,8 +13,26 @@ references GFW vessel-identity data for static risk factors, and produces
 one explainable 0-100 score per vessel.
 
 Read-only w.r.t. the pipeline: it consumes saved CSVs and the GFW identity
-API. It writes data/processed/vessel_reliability_scores_v4.csv (+ an identity
-cache) and leaves the v1, v2 and v3 files untouched for comparison.
+API. It writes data/processed/vessel_reliability_scores_v6.csv (+ an identity
+cache) and leaves the v1..v5 files untouched for comparison. v6 is FINAL --
+every vessel in the top-15 has now been type/age-verified; the dashboard
+should read v6.
+
+v6 closes the top-15 verification: HAKKAISAN (352003690, IMO 9376878) was the
+last unverified top-15 vessel (GFW type "OTHER", no IMO). Confirmed by
+VesselFinder / vesseltracker.com / MyShipTracking as a genuine Crude Oil
+Tanker (VLCC, built 2009, LOA 333 m, Panama). Added to CONFIRMED_VESSEL_TYPES
+(recorded, but NOT a small-utility match -> no behavioural down-weight) and to
+vessel_age_cache.json; its age>15yr component becomes +20 (17 yr old). Only
+change vs v5.
+
+v5 adds one CONFIRMED_VESSEL_TYPES entry: OCEAN CENTURY (636025162, IMO
+9435650) is a Tug -- VesselFinder / MarineTraffic / vesseltracker /
+vesseltracking.net all agree -- but GFW's type field returned "NA", so v2's
+auto-detection missed it and its behavioural score carried full weight all the
+way through v4, where the new age component lifted it to #2 (85). v5 applies
+the v2 small-utility-craft down-weight (behavioural x0.25) it should have had
+since v2. Only change vs v4.
 
 v4 fixes the vessel-age component. GFW's registry `builtYear` is unpopulated
 for every vessel in this fleet (confirmed gap), so the age>15yr component had
@@ -60,7 +78,9 @@ PROC = "data/processed"
 OUTPUT_FILE = f"{PROC}/vessel_reliability_scores.csv"        # v1 -- left untouched
 OUTPUT_FILE_V2 = f"{PROC}/vessel_reliability_scores_v2.csv"  # v2 -- left untouched
 OUTPUT_FILE_V3 = f"{PROC}/vessel_reliability_scores_v3.csv"  # v3 -- left untouched
-OUTPUT_FILE_V4 = f"{PROC}/vessel_reliability_scores_v4.csv"  # written by this module
+OUTPUT_FILE_V4 = f"{PROC}/vessel_reliability_scores_v4.csv"  # v4 -- left untouched
+OUTPUT_FILE_V5 = f"{PROC}/vessel_reliability_scores_v5.csv"  # v5 -- left untouched
+OUTPUT_FILE_V6 = f"{PROC}/vessel_reliability_scores_v6.csv"  # written by this module -- FINAL
 GFW_CACHE_PATH = f"{PROC}/gfw_identity_cache.json"
 AGE_CACHE_PATH = f"{PROC}/vessel_age_cache.json"
 
@@ -245,6 +265,18 @@ _UTILITY_KEYWORDS = ("pilot", "tug", "landing_craft", "patrol", "tender",
 CONFIRMED_VESSEL_TYPES = {
     422565000: "pilot_vessel",    # HADI 3       -- external registry lookup
     422405300: "landing_craft",   # AMIR BANDAR (IMO 9506370) -- external lookup
+    636025162: "tug",             # OCEAN CENTURY (IMO 9435650) -- VesselFinder,
+    #   MarineTraffic, vesseltracker.com and vesseltracking.net all list it as
+    #   Tug / Towing Vessel (built 2007, GT 464, LOA ~37 m -- a small coastal
+    #   tug). GFW returned type "NA", so v2's auto-detection missed it and its
+    #   behavioural score kept full weight through v4. (2026-09-07 lookup.)
+    352003690: "crude_oil_tanker",  # HAKKAISAN (IMO 9376878) -- VesselFinder,
+    #   vesseltracker.com and MyShipTracking all list it as a Crude Oil Tanker
+    #   / VLCC (built 2009, GT ~160,632, DWT ~309,708, LOA 333 m, Panama flag,
+    #   callsign 3E5799). GFW returned type "OTHER" with no IMO, leaving it
+    #   unverified in the v5 top-15. Confirmed here as a GENUINE large tanker:
+    #   recorded so its type is explicit, but NOT a small-utility match, so no
+    #   behavioural down-weight -- it just takes the age>15yr boost. (2026-09-07)
 }
 # Coarse type strings that are NOT specific enough to resolve a vessel type
 # from (they get skipped, falling through to the next source).
@@ -1072,7 +1104,7 @@ def main():
                            _csv_flag_map(), _csv_type_map(), age_cache=age_cache)
 
     Path(PROC).mkdir(parents=True, exist_ok=True)
-    scored[COLUMN_ORDER].to_csv(OUTPUT_FILE_V4, index=False)
+    scored[COLUMN_ORDER].to_csv(OUTPUT_FILE_V6, index=False)
     report(scored)
 
     n_gfw = int(scored["gfw_identity_available"].sum())
@@ -1103,9 +1135,8 @@ def main():
     print(f"  Vessel type: {n_type} vessels have some type string, but only "
           f"~{n_specific} are more specific than a broad bucket; "
           f"{n_cav} matched the small-utility-craft caveat.")
-    print(f"  v1 + v2 + v3 files left untouched: {OUTPUT_FILE} , "
-          f"{OUTPUT_FILE_V2} , {OUTPUT_FILE_V3}")
-    print(f"  v4 table ({len(scored)} vessels) -> {OUTPUT_FILE_V4}")
+    print(f"  v1..v5 files left untouched.")
+    print(f"  v6 table ({len(scored)} vessels, FINAL) -> {OUTPUT_FILE_V6}")
 
 
 if __name__ == "__main__":

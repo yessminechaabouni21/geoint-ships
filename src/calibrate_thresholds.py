@@ -220,6 +220,30 @@ REGIONS = {
         "raw_label": "india_mangalore_sep_oct2025",
         "manual_reference": None,
     },
+    # Second new region: Jamnagar refinery waters + Vadinar terminal, Gulf of
+    # Kutch. Major Russian-crude import destination (Nayara/Vadinar is EU- +
+    # UK-sanctioned since the Jul 2025 18th package); chronic shadow-fleet /
+    # deceptive-AIS background is expected -- "incident-free" here means "no
+    # discrete event", not "no spoofing".
+    # Incident-free check (2026-09-08): no documented discrete maritime
+    # incident (attack / explosion / fire / spill / grounding / collision /
+    # detention / port closure) inside this bbox/window in 2025-2026. Nearby
+    # but NOT in-bbox/in-window: Operation Sindoor hostilities early-mid May
+    # 2025 (land strikes ~150 km NE, no maritime effect); MV Rajeev Gandhi
+    # container loss off Okha Jun 2026 (west of the bbox, en route to Mundra);
+    # 2025 Kerala oil spill (~1000 km S). Ping Shun (IMO 9231901) broadcast
+    # Vadinar as destination then diverted ~30 Mar 2026 -- signalling only.
+    # Baseline window 2025-09-01..2025-10-12: 6 weeks, same width/timing as
+    # india_mangalore (deliberate parallel), clear of Operation Sindoor, 3
+    # SAR passes with ~92% AIS-match rate. No hand-calibrated thresholds
+    # exist -> manual_reference is None, every derived value stays PROVISIONAL.
+    "jamnagar_vadinar": {
+        "bbox": {"min_lat": 22.2, "max_lat": 22.7, "min_lon": 69.5, "max_lon": 70.1},
+        "start_date": "2025-09-01",
+        "end_date": "2025-10-12",
+        "raw_label": "jamnagar_vadinar_sep_oct2025",
+        "manual_reference": None,
+    },
 }
 
 
