@@ -26,5 +26,12 @@
   "built_year": 2007,
   "source": "web_search 2026-09-07: vesseltracker / vesselfinder / marinetraffic listing agree built 2007 (vessel is a TUG, not a tanker). IMO not in GFW data; resolved via MMSI 636025162.",
   "resolved_utc": "2026-09-07"
+ },
+ "352003690": {
+  "name_seen": "HAKKAISAN",
+  "imo": "9376878",
+  "built_year": 2009,
+  "source": "web_search 2026-09-07: VesselFinder / vesseltracker.com / MyShipTracking all report Crude Oil Tanker (VLCC), IMO 9376878, MMSI 352003690, callsign 3E5799, Panama flag, built 2009 (launched 2009-01-14, completed 2009-04-28; GT ~160,632, DWT ~309,708, LOA 333 m). IMO not in GFW data; resolved via MMSI 352003690.",
+  "resolved_utc": "2026-09-07"
  }
 }

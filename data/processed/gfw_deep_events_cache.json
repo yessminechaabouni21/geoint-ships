@@ -79839,5 +79839,2625 @@
    "2025-09-01",
    "2026-03-24"
   ]
+ },
+ "667001287": {
+  "identity": {
+   "mmsi": 667001287,
+   "vessel_id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+   "identity_available": true,
+   "name": "TIBURON",
+   "flag": "SLE",
+   "imo": "9283291",
+   "positions_counter": 665943,
+   "messages_counter": 4475445,
+   "transmission_from": "2025-06-17",
+   "transmission_to": "2026-09-05",
+   "current_name_since": "2025-06-17",
+   "identity_history": [
+    {
+     "ssvid": "667001287",
+     "flag": "SLE",
+     "name": "SOYLAR",
+     "imo": "5132901",
+     "from": "2014-12-16",
+     "to": "2015-01-01",
+     "positions": 1948
+    },
+    {
+     "ssvid": "667001287",
+     "flag": "SLE",
+     "name": "SINO CARGO 1",
+     "imo": null,
+     "from": "2019-01-21",
+     "to": "2019-12-25",
+     "positions": 497
+    },
+    {
+     "ssvid": "667001287",
+     "flag": "SLE",
+     "name": "SINO CARGO 1",
+     "imo": null,
+     "from": "2019-02-03",
+     "to": "2019-03-21",
+     "positions": 239
+    },
+    {
+     "ssvid": "667001287",
+     "flag": "SLE",
+     "name": "SINO CARGO 1",
+     "imo": null,
+     "from": "2019-03-23",
+     "to": "2021-02-21",
+     "positions": 17589
+    },
+    {
+     "ssvid": "667001287",
+     "flag": "SLE",
+     "name": "AMS 1",
+     "imo": "9019999",
+     "from": "2022-04-12",
+     "to": "2023-10-12",
+     "positions": 203787
+    },
+    {
+     "ssvid": "667001287",
+     "flag": "SLE",
+     "name": "TIBURON",
+     "imo": "9283291",
+     "from": "2025-06-17",
+     "to": "2026-09-05",
+     "positions": 665943
+    }
+   ],
+   "n_distinct_flags": 1,
+   "n_distinct_names": 4
+  },
+  "events": {
+   "port_visit": [
+    {
+     "start": "2025-10-23T16:35:32.000Z",
+     "end": "2025-10-28T07:02:45.000Z",
+     "id": "02877f7f392eb8dba803c170f4af70e1",
+     "type": "port_visit",
+     "position": {
+      "lat": 22.5523,
+      "lon": 69.6421
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8480"
+      ],
+      "rfmo": [
+       "IOTC",
+       "IWC",
+       "ACAP"
+      ],
+      "fao": [
+       "51.4",
+       "51"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      69.64209912734339,
+      22.552314486446218,
+      69.6361249724474,
+      22.5514633802751
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 10,
+      "endDistanceFromShoreKm": 10,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "cdf20501b8aa514ac7ce45fb438f8253",
+      "confidence": "4",
+      "durationHrs": 110.45361111111112,
+      "startAnchorage": {
+       "anchorageId": "3956d8ed",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.552314486446218,
+       "lon": 69.64209912734339,
+       "name": null,
+       "topDestination": "VADINAR"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "3956d8ed",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.552314486446218,
+       "lon": 69.64209912734339,
+       "name": null,
+       "topDestination": "VADINAR"
+      },
+      "endAnchorage": {
+       "anchorageId": "3956d8ef",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.5514633802751,
+       "lon": 69.6361249724474,
+       "name": null,
+       "topDestination": "VADINAR"
+      }
+     }
+    },
+    {
+     "start": "2025-11-07T06:20:01.000Z",
+     "end": "2025-11-08T06:35:04.000Z",
+     "id": "71ab12b84801af4ca678c7f38ac80a81",
+     "type": "port_visit",
+     "position": {
+      "lat": 29.7248,
+      "lon": 32.5846
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8490"
+      ],
+      "rfmo": [
+       "IWC",
+       "IOTC",
+       "ACAP",
+       "PERSGA"
+      ],
+      "fao": [
+       "51.1",
+       "51"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      32.5846331831365,
+      29.724772532969432,
+      32.57345146756374,
+      29.947923995215316
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 9,
+      "endDistanceFromShoreKm": 0,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "dfe244fa02012b506436662054859e01",
+      "confidence": "4",
+      "durationHrs": 24.250833333333333,
+      "startAnchorage": {
+       "anchorageId": "14564709",
+       "atDock": false,
+       "distanceFromShoreKm": "9",
+       "flag": "EGY",
+       "id": "egy-suezsouthanchorage",
+       "lat": 29.724772532969432,
+       "lon": 32.5846331831365,
+       "name": "SUEZ SOUTH ANCHORAGE",
+       "topDestination": "SUEZ"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "14564709",
+       "atDock": false,
+       "distanceFromShoreKm": "9",
+       "flag": "EGY",
+       "id": "egy-suezsouthanchorage",
+       "lat": 29.724772532969432,
+       "lon": 32.5846331831365,
+       "name": "SUEZ SOUTH ANCHORAGE",
+       "topDestination": "SUEZ"
+      },
+      "endAnchorage": {
+       "anchorageId": "1456251b",
+       "atDock": true,
+       "distanceFromShoreKm": "0",
+       "flag": "EGY",
+       "id": "egy-suezport",
+       "lat": 29.947923995215316,
+       "lon": 32.57345146756374,
+       "name": "SUEZ PORT",
+       "topDestination": "ATHENES"
+      }
+     }
+    },
+    {
+     "start": "2025-12-03T07:55:16.000Z",
+     "end": "2025-12-05T00:52:35.000Z",
+     "id": "2e6115385b75f0c3316afa3c75957e9d",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.3043,
+      "lon": 28.7486
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "NAMMCO",
+       "NASCO",
+       "ICES",
+       "IWC",
+       "ICCAT",
+       "ACAP"
+      ],
+      "fao": [
+       "27.3.d",
+       "27.3.d.32",
+       "27.3",
+       "27"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.748639395345986,
+      60.304309641312,
+      28.714239532578286,
+      60.33377976450089
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 2,
+      "endDistanceFromShoreKm": 1,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "316585924dbe7ec23a71922b71780223",
+      "confidence": "4",
+      "durationHrs": 40.95527777777778,
+      "startAnchorage": {
+       "anchorageId": "4696dcf5",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.304309641312,
+       "lon": 28.748639395345986,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696dcf5",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.304309641312,
+       "lon": 28.748639395345986,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696db8f",
+       "atDock": true,
+       "distanceFromShoreKm": "1",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.33377976450089,
+       "lon": 28.714239532578286,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2025-12-05T01:09:24.000Z",
+     "end": "2025-12-05T16:17:36.000Z",
+     "id": "d8077238c298e44c6c45e982fa14cc36",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.0288,
+      "lon": 28.4431
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "NASCO",
+       "ICES",
+       "ACAP",
+       "ICCAT",
+       "NAMMCO",
+       "IWC"
+      ],
+      "fao": [
+       "27.3.d.32",
+       "27.3",
+       "27.3.d",
+       "27"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.44305988014398,
+      60.02877168074853,
+      28.494106235225114,
+      60.00399118621962
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 3,
+      "endDistanceFromShoreKm": 6,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "b1fe0b5be5fe58b1d94a0e59e26cd266",
+      "confidence": "4",
+      "durationHrs": 15.136666666666667,
+      "startAnchorage": {
+       "anchorageId": "4696be81",
+       "atDock": false,
+       "distanceFromShoreKm": "3",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02877168074853,
+       "lon": 28.44305988014398,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696be81",
+       "atDock": false,
+       "distanceFromShoreKm": "3",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02877168074853,
+       "lon": 28.44305988014398,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696bdfb",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.00399118621962,
+       "lon": 28.494106235225114,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2025-12-05T18:31:48.000Z",
+     "end": "2025-12-07T15:07:47.000Z",
+     "id": "9fc9be94c55576daefc4e0c7c4da1080",
+     "type": "port_visit",
+     "position": {
+      "lat": 59.7829,
+      "lon": 28.4077
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "ICES",
+       "ICCAT",
+       "NAMMCO",
+       "NASCO",
+       "IWC",
+       "ACAP"
+      ],
+      "fao": [
+       "27.3",
+       "27",
+       "27.3.d.32",
+       "27.3.d"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.40772420992392,
+      59.78286384398603,
+      28.444391931179812,
+      59.7849305238738
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 1,
+      "endDistanceFromShoreKm": 0,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "c491c4920a3022f2a3f566c8e16f373f",
+      "confidence": "4",
+      "durationHrs": 44.59972222222222,
+      "startAnchorage": {
+       "anchorageId": "46969e89",
+       "atDock": false,
+       "distanceFromShoreKm": "1",
+       "flag": "RUS",
+       "id": "rus-vistino",
+       "lat": 59.78286384398603,
+       "lon": 28.40772420992392,
+       "name": "VISTINO",
+       "topDestination": "UST LUGA"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "46969e89",
+       "atDock": false,
+       "distanceFromShoreKm": "1",
+       "flag": "RUS",
+       "id": "rus-vistino",
+       "lat": 59.78286384398603,
+       "lon": 28.40772420992392,
+       "name": "VISTINO",
+       "topDestination": "UST LUGA"
+      },
+      "endAnchorage": {
+       "anchorageId": "46969c29",
+       "atDock": true,
+       "distanceFromShoreKm": "0",
+       "flag": "RUS",
+       "id": "rus-vistino",
+       "lat": 59.7849305238738,
+       "lon": 28.444391931179812,
+       "name": "VISTINO",
+       "topDestination": "UST LUGA"
+      }
+     }
+    },
+    {
+     "start": "2025-12-25T07:09:32.000Z",
+     "end": "2025-12-26T04:46:45.000Z",
+     "id": "0ab3106040744e9739136d828dbda0d6",
+     "type": "port_visit",
+     "position": {
+      "lat": 31.4718,
+      "lon": 32.3028
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8490"
+      ],
+      "rfmo": [
+       "ACAP",
+       "IWC",
+       "GFCM",
+       "ICCAT"
+      ],
+      "fao": [
+       "37",
+       "37.3",
+       "37.3.2"
+      ],
+      "majorFao": [
+       "37"
+      ],
+      "eez12Nm": [
+       "8490"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      32.30275693031122,
+      31.471754569476413,
+      32.33520754777416,
+      31.472745013183648
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 21,
+      "endDistanceFromShoreKm": 21,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "165d1fb5535e11a7683f542fd5625f84",
+      "confidence": "4",
+      "durationHrs": 21.620277777777776,
+      "startAnchorage": {
+       "anchorageId": "14f98083",
+       "atDock": false,
+       "distanceFromShoreKm": "21",
+       "flag": "EGY",
+       "id": "egy-portsaid",
+       "lat": 31.471754569476413,
+       "lon": 32.30275693031122,
+       "name": "PORT SAID",
+       "topDestination": "PORT SAID"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "14f98083",
+       "atDock": false,
+       "distanceFromShoreKm": "21",
+       "flag": "EGY",
+       "id": "egy-portsaid",
+       "lat": 31.471754569476413,
+       "lon": 32.30275693031122,
+       "name": "PORT SAID",
+       "topDestination": "PORT SAID"
+      },
+      "endAnchorage": {
+       "anchorageId": "14fa2aa3",
+       "atDock": false,
+       "distanceFromShoreKm": "21",
+       "flag": "EGY",
+       "id": "egy-portsaid",
+       "lat": 31.472745013183648,
+       "lon": 32.33520754777416,
+       "name": "PORT SAID",
+       "topDestination": "PORT SAID"
+      }
+     }
+    },
+    {
+     "start": "2026-01-24T03:25:54.000Z",
+     "end": "2026-02-04T02:23:57.000Z",
+     "id": "4c1c2f3fe16b9225a1f6c496fac18e35",
+     "type": "port_visit",
+     "position": {
+      "lat": 22.5507,
+      "lon": 69.6306
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8480"
+      ],
+      "rfmo": [
+       "IWC",
+       "ACAP",
+       "IOTC"
+      ],
+      "fao": [
+       "51",
+       "51.4"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      69.63059764742992,
+      22.55065358177005,
+      69.61811845387453,
+      22.54969640480416
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 10,
+      "endDistanceFromShoreKm": 10,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "4256f0565c02534eec844e5b87d8d0e6",
+      "confidence": "4",
+      "durationHrs": 262.9675,
+      "startAnchorage": {
+       "anchorageId": "3956d8e5",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.55065358177005,
+       "lon": 69.63059764742992,
+       "name": null,
+       "topDestination": "VADINAR"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "3956d8e5",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.55065358177005,
+       "lon": 69.63059764742992,
+       "name": null,
+       "topDestination": "VADINAR"
+      },
+      "endAnchorage": {
+       "anchorageId": "3956d91d",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.54969640480416,
+       "lon": 69.61811845387453,
+       "name": null,
+       "topDestination": "VADINAR"
+      }
+     }
+    },
+    {
+     "start": "2026-02-13T08:53:35.000Z",
+     "end": "2026-02-14T05:05:00.000Z",
+     "id": "ae010bb03770f2ec9b20b0dade048e31",
+     "type": "port_visit",
+     "position": {
+      "lat": 29.7884,
+      "lon": 32.5585
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8490"
+      ],
+      "rfmo": [
+       "PERSGA",
+       "ACAP",
+       "IOTC",
+       "IWC"
+      ],
+      "fao": [
+       "51.1",
+       "51"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      32.55851489116695,
+      29.7883876749519,
+      32.57345146756374,
+      29.947923995215316
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 6,
+      "endDistanceFromShoreKm": 0,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "13322d37c1c8fa4ede77a368236cb005",
+      "confidence": "4",
+      "durationHrs": 20.190277777777776,
+      "startAnchorage": {
+       "anchorageId": "14563839",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "EGY",
+       "id": "egy-suezsouthanchorage",
+       "lat": 29.7883876749519,
+       "lon": 32.55851489116695,
+       "name": "SUEZ SOUTH ANCHORAGE",
+       "topDestination": "SUEZ"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "14563839",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "EGY",
+       "id": "egy-suezsouthanchorage",
+       "lat": 29.7883876749519,
+       "lon": 32.55851489116695,
+       "name": "SUEZ SOUTH ANCHORAGE",
+       "topDestination": "SUEZ"
+      },
+      "endAnchorage": {
+       "anchorageId": "1456251b",
+       "atDock": true,
+       "distanceFromShoreKm": "0",
+       "flag": "EGY",
+       "id": "egy-suezport",
+       "lat": 29.947923995215316,
+       "lon": 32.57345146756374,
+       "name": "SUEZ PORT",
+       "topDestination": "ATHENES"
+      }
+     }
+    },
+    {
+     "start": "2026-03-03T14:27:22.000Z",
+     "end": "2026-03-08T19:14:56.000Z",
+     "id": "e5109d6b921df6cd9b873fb052a87ec0",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.0169,
+      "lon": 27.0629
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "ACAP",
+       "ICES",
+       "NASCO",
+       "NAMMCO",
+       "ICCAT",
+       "IWC"
+      ],
+      "fao": [
+       "27",
+       "27.3.d",
+       "27.3",
+       "27.3.d.32"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      27.062925245299397,
+      60.016880384799094,
+      27.062925245299397,
+      60.016880384799094
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 2,
+      "endDistanceFromShoreKm": 2,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "1758a83082ece805999b53eb84bfa535",
+      "confidence": "4",
+      "durationHrs": 124.79277777777777,
+      "startAnchorage": {
+       "anchorageId": "4693e1cb",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-rus-260",
+       "lat": 60.016880384799094,
+       "lon": 27.062925245299397,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4693e1cb",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-rus-260",
+       "lat": 60.016880384799094,
+       "lon": 27.062925245299397,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4693e1cb",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-rus-260",
+       "lat": 60.016880384799094,
+       "lon": 27.062925245299397,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2026-03-09T03:46:30.000Z",
+     "end": "2026-03-12T03:18:21.000Z",
+     "id": "23c819c4d17e25583a647e0acf70d122",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.3179,
+      "lon": 28.7318
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "IWC",
+       "ICES",
+       "NASCO",
+       "ACAP",
+       "ICCAT",
+       "NAMMCO"
+      ],
+      "fao": [
+       "27.3.d.32",
+       "27.3.d",
+       "27.3",
+       "27"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.73177246689428,
+      60.31790002243583,
+      28.714239532578286,
+      60.33377976450089
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 1,
+      "endDistanceFromShoreKm": 1,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "19f8c5501ad762b9fe41d2a0a86e60aa",
+      "confidence": "4",
+      "durationHrs": 71.53083333333333,
+      "startAnchorage": {
+       "anchorageId": "4696dc7d",
+       "atDock": false,
+       "distanceFromShoreKm": "1",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.31790002243583,
+       "lon": 28.73177246689428,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696dc7d",
+       "atDock": false,
+       "distanceFromShoreKm": "1",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.31790002243583,
+       "lon": 28.73177246689428,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696db8f",
+       "atDock": true,
+       "distanceFromShoreKm": "1",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.33377976450089,
+       "lon": 28.714239532578286,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2026-03-12T03:32:43.000Z",
+     "end": "2026-03-19T00:15:39.000Z",
+     "id": "79002f4fca522959ae5118a7556bc7f8",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.0288,
+      "lon": 28.4431
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "NASCO",
+       "NAMMCO",
+       "ACAP",
+       "ICES",
+       "ICCAT",
+       "IWC"
+      ],
+      "fao": [
+       "27.3.d",
+       "27.3.d.32",
+       "27.3",
+       "27"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.44305988014398,
+      60.02877168074853,
+      28.494106235225114,
+      60.00399118621962
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 3,
+      "endDistanceFromShoreKm": 6,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "db7000624494e4dbff56a4672290e9df",
+      "confidence": "4",
+      "durationHrs": 164.71555555555557,
+      "startAnchorage": {
+       "anchorageId": "4696be81",
+       "atDock": false,
+       "distanceFromShoreKm": "3",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02877168074853,
+       "lon": 28.44305988014398,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696be81",
+       "atDock": false,
+       "distanceFromShoreKm": "3",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02877168074853,
+       "lon": 28.44305988014398,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696bdfb",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.00399118621962,
+       "lon": 28.494106235225114,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    }
+   ],
+   "gap": [],
+   "encounter": [],
+   "loitering": [
+    {
+     "start": "2026-01-02T15:54:50.000Z",
+     "end": "2026-01-03T09:43:36.000Z",
+     "id": "5673b977a828a367e572dceae5747a67",
+     "type": "loitering",
+     "position": {
+      "lat": 14.9201,
+      "lon": 56.1469
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8354"
+      ],
+      "rfmo": [
+       "ACAP",
+       "IWC",
+       "IOTC"
+      ],
+      "fao": [
+       "51.3",
+       "51"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      56.322493333333334,
+      14.92284,
+      55.97132666666667,
+      14.917275
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 270,
+      "endDistanceFromShoreKm": 252,
+      "startDistanceFromPortKm": 325.299031,
+      "endDistanceFromPortKm": 298.95334399999996
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "4c1c2f3fe16b9225a1f6c496fac18e35"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 17.812777777777775,
+      "totalDistanceKm": 39.82920888407336,
+      "averageSpeedKnots": 1.2073384949563737,
+      "averageDistanceFromShoreKm": 260.6427593191046
+     }
+    },
+    {
+     "start": "2026-01-06T15:51:17.000Z",
+     "end": "2026-01-06T21:07:21.000Z",
+     "id": "652f421aafd01a3dd175a0f06e62e1eb",
+     "type": "loitering",
+     "position": {
+      "lat": 14.939,
+      "lon": 55.5517
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8354"
+      ],
+      "rfmo": [
+       "IWC",
+       "IOTC",
+       "ACAP"
+      ],
+      "fao": [
+       "51",
+       "51.3"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      55.613776666666666,
+      14.927745,
+      55.4896,
+      14.950335
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 238,
+      "endDistanceFromShoreKm": 232,
+      "startDistanceFromPortKm": 273.654688,
+      "endDistanceFromPortKm": 264.39446899999996
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "4c1c2f3fe16b9225a1f6c496fac18e35"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 5.267777777777778,
+      "totalDistanceKm": 13.590982254726411,
+      "averageSpeedKnots": 1.3931004009021264,
+      "averageDistanceFromShoreKm": 234.0127082893904
+     }
+    },
+    {
+     "start": "2026-01-10T03:53:42.000Z",
+     "end": "2026-01-10T05:57:32.000Z",
+     "id": "4498d4dfeba52999314bc13c2b45139a",
+     "type": "loitering",
+     "position": {
+      "lat": 15.0915,
+      "lon": 55.1545
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8354"
+      ],
+      "rfmo": [
+       "IWC",
+       "IOTC",
+       "ACAP"
+      ],
+      "fao": [
+       "51",
+       "51.3"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      55.181576666666665,
+      15.091448333333334,
+      55.12739333333333,
+      15.091503333333334
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 209,
+      "endDistanceFromShoreKm": 208,
+      "startDistanceFromPortKm": 233.512406,
+      "endDistanceFromPortKm": 230.892656
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "4c1c2f3fe16b9225a1f6c496fac18e35"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 2.063888888888889,
+      "totalDistanceKm": 5.871744956107942,
+      "averageSpeedKnots": 1.5361721526172707,
+      "averageDistanceFromShoreKm": 208.50605652759083
+     }
+    },
+    {
+     "start": "2026-01-12T08:53:28.000Z",
+     "end": "2026-01-13T08:24:35.000Z",
+     "id": "ed186f7cf4991374c34406cc10af5bfa",
+     "type": "loitering",
+     "position": {
+      "lat": 15.1002,
+      "lon": 55.8208
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8354"
+      ],
+      "rfmo": [
+       "IOTC",
+       "ACAP",
+       "IWC"
+      ],
+      "fao": [
+       "51",
+       "51.3"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      55.87972,
+      15.114193333333333,
+      55.761833333333335,
+      15.086183333333333
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 229,
+      "endDistanceFromShoreKm": 227,
+      "startDistanceFromPortKm": 276.874188,
+      "endDistanceFromPortKm": 269.842531
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "4c1c2f3fe16b9225a1f6c496fac18e35"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 23.518611111111113,
+      "totalDistanceKm": 24.739001933029883,
+      "averageSpeedKnots": 0.5679753936716502,
+      "averageDistanceFromShoreKm": 225.9150975252652
+     }
+    },
+    {
+     "start": "2026-01-13T15:58:35.000Z",
+     "end": "2026-01-13T18:06:05.000Z",
+     "id": "1e1edb7488610187963d077a4f61cefb",
+     "type": "loitering",
+     "position": {
+      "lat": 14.9466,
+      "lon": 56.5654
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8354"
+      ],
+      "rfmo": [
+       "IWC",
+       "IOTC",
+       "ACAP"
+      ],
+      "fao": [
+       "51.3",
+       "51"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      56.569446666666664,
+      14.951251666666666,
+      56.561366666666665,
+      14.941908333333334
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 282,
+      "endDistanceFromShoreKm": 282,
+      "startDistanceFromPortKm": 343.229312,
+      "endDistanceFromPortKm": 343.11778100000004
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "4c1c2f3fe16b9225a1f6c496fac18e35"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 2.125,
+      "totalDistanceKm": 1.3932316680616563,
+      "averageSpeedKnots": 0.3540164319811095,
+      "averageDistanceFromShoreKm": 281.8620437065071
+     }
+    },
+    {
+     "start": "2026-01-17T04:57:57.000Z",
+     "end": "2026-01-23T17:58:29.000Z",
+     "id": "e2f53c733453a9d0e28a2edac485f589",
+     "type": "loitering",
+     "position": {
+      "lat": 21.9539,
+      "lon": 68.738
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8480"
+      ],
+      "rfmo": [
+       "IOTC",
+       "ACAP",
+       "IWC"
+      ],
+      "fao": [
+       "51.4",
+       "51"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      68.73176,
+      21.954643333333333,
+      68.74416,
+      21.953105
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 38,
+      "endDistanceFromShoreKm": 38,
+      "startDistanceFromPortKm": 45.436789,
+      "endDistanceFromPortKm": 44.406641
+     },
+     "vessel": {
+      "id": "17be60cb1-178d-c3b6-0e44-c3229f1350b1",
+      "name": "TIBURON",
+      "ssvid": "667001287",
+      "flag": "SLE",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "4c1c2f3fe16b9225a1f6c496fac18e35"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 157.0088888888889,
+      "totalDistanceKm": 12.315997340586643,
+      "averageSpeedKnots": 0.04235496857823421,
+      "averageDistanceFromShoreKm": 37.9359086038915
+     }
+    }
+   ],
+   "fishing": []
+  },
+  "track_probe": "HTTP 404 (no per-vessel track)",
+  "baseline_period": [
+   "2025-09-01",
+   "2026-03-24"
+  ]
+ },
+ "613511209": {
+  "identity": {
+   "mmsi": 613511209,
+   "vessel_id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+   "identity_available": true,
+   "name": "SEASONS I",
+   "flag": "CMR",
+   "imo": "9308950",
+   "positions_counter": 316931,
+   "messages_counter": 1613834,
+   "transmission_from": "2025-11-26",
+   "transmission_to": "2026-07-25",
+   "current_name_since": "2025-11-26",
+   "identity_history": [
+    {
+     "ssvid": "613511209",
+     "flag": "CMR",
+     "name": "SEASONS I",
+     "imo": "9308950",
+     "from": "2025-11-26",
+     "to": "2026-07-25",
+     "positions": 316931
+    }
+   ],
+   "n_distinct_flags": 1,
+   "n_distinct_names": 1
+  },
+  "events": {
+   "port_visit": [
+    {
+     "start": "2025-12-14T07:42:31.000Z",
+     "end": "2025-12-14T11:28:56.000Z",
+     "id": "7e13af7bdc6b1a51fcaed15d3420ec46",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.0277,
+      "lon": 28.4988
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "ACAP",
+       "IWC",
+       "NASCO",
+       "ICES",
+       "NAMMCO",
+       "ICCAT"
+      ],
+      "fao": [
+       "27.3",
+       "27.3.d",
+       "27",
+       "27.3.d.32"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.498769809596048,
+      60.02773763865024,
+      28.498769809596048,
+      60.02773763865024
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 6,
+      "endDistanceFromShoreKm": 6,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "96b8c58a0f9bce4e4f73bbfdbe6cc336",
+      "confidence": "4",
+      "durationHrs": 3.7736111111111112,
+      "startAnchorage": {
+       "anchorageId": "4696be13",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02773763865024,
+       "lon": 28.498769809596048,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696be13",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02773763865024,
+       "lon": 28.498769809596048,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696be13",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02773763865024,
+       "lon": 28.498769809596048,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2025-12-14T11:45:41.000Z",
+     "end": "2025-12-14T15:50:08.000Z",
+     "id": "65ff5caade9d6b0754e40d115a4cfba5",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.016,
+      "lon": 28.4963
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "IWC",
+       "NAMMCO",
+       "ICCAT",
+       "NASCO",
+       "ACAP",
+       "ICES"
+      ],
+      "fao": [
+       "27.3.d.32",
+       "27.3",
+       "27.3.d",
+       "27"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.496339313308706,
+      60.016033315310686,
+      28.494106235225114,
+      60.00399118621962
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 6,
+      "endDistanceFromShoreKm": 6,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "ff8ac19c36bd333ab2227eaecc27129c",
+      "confidence": "4",
+      "durationHrs": 4.074166666666667,
+      "startAnchorage": {
+       "anchorageId": "4696be09",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.016033315310686,
+       "lon": 28.496339313308706,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696be09",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.016033315310686,
+       "lon": 28.496339313308706,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696bdfb",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.00399118621962,
+       "lon": 28.494106235225114,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2025-12-16T17:17:44.000Z",
+     "end": "2025-12-18T23:23:59.000Z",
+     "id": "c9c75247112d49d1f0f9161bc128d544",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.3043,
+      "lon": 28.7486
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "ACAP",
+       "NASCO",
+       "ICCAT",
+       "IWC",
+       "NAMMCO",
+       "ICES"
+      ],
+      "fao": [
+       "27.3.d.32",
+       "27.3.d",
+       "27",
+       "27.3"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.748639395345986,
+      60.304309641312,
+      28.700916812118116,
+      60.33473885975645
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 2,
+      "endDistanceFromShoreKm": 1,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "42bec94b633c934e1e6d9e6c481ccd3a",
+      "confidence": "4",
+      "durationHrs": 54.104166666666664,
+      "startAnchorage": {
+       "anchorageId": "4696dcf5",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.304309641312,
+       "lon": 28.748639395345986,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696dcf5",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.304309641312,
+       "lon": 28.748639395345986,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696db91",
+       "atDock": true,
+       "distanceFromShoreKm": "1",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.33473885975645,
+       "lon": 28.700916812118116,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2026-01-05T07:22:53.000Z",
+     "end": "2026-01-06T04:50:59.000Z",
+     "id": "bd0c5400427be16020bda72bee84f348",
+     "type": "port_visit",
+     "position": {
+      "lat": 31.4718,
+      "lon": 32.3028
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8490"
+      ],
+      "rfmo": [
+       "GFCM",
+       "ACAP",
+       "ICCAT",
+       "IWC"
+      ],
+      "fao": [
+       "37.3.2",
+       "37",
+       "37.3"
+      ],
+      "majorFao": [
+       "37"
+      ],
+      "eez12Nm": [
+       "8490"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      32.30275693031122,
+      31.471754569476413,
+      32.335151218065626,
+      31.452803787664955
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 21,
+      "endDistanceFromShoreKm": 19,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "0302a1c25537617e6f6819ef04384155",
+      "confidence": "4",
+      "durationHrs": 21.468333333333334,
+      "startAnchorage": {
+       "anchorageId": "14f98083",
+       "atDock": false,
+       "distanceFromShoreKm": "21",
+       "flag": "EGY",
+       "id": "egy-portsaid",
+       "lat": 31.471754569476413,
+       "lon": 32.30275693031122,
+       "name": "PORT SAID",
+       "topDestination": "PORT SAID"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "14f98083",
+       "atDock": false,
+       "distanceFromShoreKm": "21",
+       "flag": "EGY",
+       "id": "egy-portsaid",
+       "lat": 31.471754569476413,
+       "lon": 32.30275693031122,
+       "name": "PORT SAID",
+       "topDestination": "PORT SAID"
+      },
+      "endAnchorage": {
+       "anchorageId": "14f98013",
+       "atDock": false,
+       "distanceFromShoreKm": "19",
+       "flag": "EGY",
+       "id": "egy-portsaid",
+       "lat": 31.452803787664955,
+       "lon": 32.335151218065626,
+       "name": "PORT SAID",
+       "topDestination": "PORT SAID"
+      }
+     }
+    },
+    {
+     "start": "2026-01-27T20:01:14.000Z",
+     "end": "2026-02-05T23:32:44.000Z",
+     "id": "82a54caa248de6a575dd4f04116bc1c8",
+     "type": "port_visit",
+     "position": {
+      "lat": 22.5549,
+      "lon": 69.66
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8480"
+      ],
+      "rfmo": [
+       "IWC",
+       "IOTC",
+       "ACAP"
+      ],
+      "fao": [
+       "51",
+       "51.4"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      69.66000367183587,
+      22.554904385384003,
+      69.64209912734339,
+      22.552314486446218
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 10,
+      "endDistanceFromShoreKm": 10,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "c83854038150b3d467b81331d5368cff",
+      "confidence": "4",
+      "durationHrs": 219.525,
+      "startAnchorage": {
+       "anchorageId": "3956d89b",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.554904385384003,
+       "lon": 69.66000367183587,
+       "name": null,
+       "topDestination": "VADINAR"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "3956d89b",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.554904385384003,
+       "lon": 69.66000367183587,
+       "name": null,
+       "topDestination": "VADINAR"
+      },
+      "endAnchorage": {
+       "anchorageId": "3956d8ed",
+       "atDock": false,
+       "distanceFromShoreKm": "10",
+       "flag": "IND",
+       "id": "ind-vadinar",
+       "lat": 22.552314486446218,
+       "lon": 69.64209912734339,
+       "name": null,
+       "topDestination": "VADINAR"
+      }
+     }
+    },
+    {
+     "start": "2026-02-16T09:35:02.000Z",
+     "end": "2026-02-17T06:00:52.000Z",
+     "id": "9e15e935b82aed5455a226912034010c",
+     "type": "port_visit",
+     "position": {
+      "lat": 29.702,
+      "lon": 32.5916
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8490"
+      ],
+      "rfmo": [
+       "IWC",
+       "ACAP",
+       "PERSGA",
+       "IOTC"
+      ],
+      "fao": [
+       "51",
+       "51.1"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      32.59160301863064,
+      29.701995813447706,
+      32.57345146756374,
+      29.947923995215316
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 9,
+      "endDistanceFromShoreKm": 0,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "9c68714f25636aea25ea548a81e6b092",
+      "confidence": "4",
+      "durationHrs": 20.430555555555557,
+      "startAnchorage": {
+       "anchorageId": "145646fb",
+       "atDock": false,
+       "distanceFromShoreKm": "9",
+       "flag": "EGY",
+       "id": "egy-suezsouthanchorage",
+       "lat": 29.701995813447706,
+       "lon": 32.59160301863064,
+       "name": "SUEZ SOUTH ANCHORAGE",
+       "topDestination": "SUEZ"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "145646fb",
+       "atDock": false,
+       "distanceFromShoreKm": "9",
+       "flag": "EGY",
+       "id": "egy-suezsouthanchorage",
+       "lat": 29.701995813447706,
+       "lon": 32.59160301863064,
+       "name": "SUEZ SOUTH ANCHORAGE",
+       "topDestination": "SUEZ"
+      },
+      "endAnchorage": {
+       "anchorageId": "1456251b",
+       "atDock": true,
+       "distanceFromShoreKm": "0",
+       "flag": "EGY",
+       "id": "egy-suezport",
+       "lat": 29.947923995215316,
+       "lon": 32.57345146756374,
+       "name": "SUEZ PORT",
+       "topDestination": "ATHENES"
+      }
+     }
+    },
+    {
+     "start": "2026-03-08T07:00:34.000Z",
+     "end": "2026-03-09T10:23:48.000Z",
+     "id": "a39070635be5120f3aca0e1facc6274e",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.3362,
+      "lon": 28.6958
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "NAMMCO",
+       "IWC",
+       "ACAP",
+       "NASCO",
+       "ICCAT",
+       "ICES"
+      ],
+      "fao": [
+       "27.3",
+       "27.3.d.32",
+       "27.3.d",
+       "27"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.69579646922648,
+      60.336221035057235,
+      28.748639395345986,
+      60.304309641312
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 0,
+      "endDistanceFromShoreKm": 2,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "78eb545d6aab98556385c7cdae21a0cd",
+      "confidence": "4",
+      "durationHrs": 27.38722222222222,
+      "startAnchorage": {
+       "anchorageId": "4696db97",
+       "atDock": false,
+       "distanceFromShoreKm": "0",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.336221035057235,
+       "lon": 28.69579646922648,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696db97",
+       "atDock": false,
+       "distanceFromShoreKm": "0",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.336221035057235,
+       "lon": 28.69579646922648,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696dcf5",
+       "atDock": false,
+       "distanceFromShoreKm": "2",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.304309641312,
+       "lon": 28.748639395345986,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    },
+    {
+     "start": "2026-03-09T14:01:43.000Z",
+     "end": "2026-03-11T23:57:04.000Z",
+     "id": "3489a7358050fb2825bcf9ab92501832",
+     "type": "port_visit",
+     "position": {
+      "lat": 60.0288,
+      "lon": 28.4431
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "5690"
+      ],
+      "rfmo": [
+       "NASCO",
+       "ICES",
+       "IWC",
+       "ACAP",
+       "ICCAT",
+       "NAMMCO"
+      ],
+      "fao": [
+       "27.3.d.32",
+       "27.3.d",
+       "27",
+       "27.3"
+      ],
+      "majorFao": [
+       "27"
+      ],
+      "eez12Nm": [
+       "5690"
+      ],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      28.44305988014398,
+      60.02877168074853,
+      28.494106235225114,
+      60.00399118621962
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 3,
+      "endDistanceFromShoreKm": 6,
+      "startDistanceFromPortKm": 0,
+      "endDistanceFromPortKm": 0
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": null
+     },
+     "port_visit": {
+      "visitId": "45bd6b29ef7f37db7370de0764108fa2",
+      "confidence": "4",
+      "durationHrs": 57.9225,
+      "startAnchorage": {
+       "anchorageId": "4696be81",
+       "atDock": false,
+       "distanceFromShoreKm": "3",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02877168074853,
+       "lon": 28.44305988014398,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "intermediateAnchorage": {
+       "anchorageId": "4696be81",
+       "atDock": false,
+       "distanceFromShoreKm": "3",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.02877168074853,
+       "lon": 28.44305988014398,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      },
+      "endAnchorage": {
+       "anchorageId": "4696bdfb",
+       "atDock": false,
+       "distanceFromShoreKm": "6",
+       "flag": "RUS",
+       "id": "rus-primorsk",
+       "lat": 60.00399118621962,
+       "lon": 28.494106235225114,
+       "name": null,
+       "topDestination": "PRIMORSK"
+      }
+     }
+    }
+   ],
+   "gap": [],
+   "encounter": [],
+   "loitering": [
+    {
+     "start": "2026-01-14T11:56:14.000Z",
+     "end": "2026-01-15T07:15:51.000Z",
+     "id": "cd032ff69c6d2b29eddc2db2301c81c5",
+     "type": "loitering",
+     "position": {
+      "lat": 16.0803,
+      "lon": 56.2719
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8354"
+      ],
+      "rfmo": [
+       "IOTC",
+       "ACAP",
+       "IWC"
+      ],
+      "fao": [
+       "51",
+       "51.3"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      56.3422,
+      16.122203333333335,
+      56.20166666666667,
+      16.038333333333334
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 153,
+      "endDistanceFromShoreKm": 161,
+      "startDistanceFromPortKm": 255.442875,
+      "endDistanceFromPortKm": 244.901453
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "82a54caa248de6a575dd4f04116bc1c8"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 19.326944444444443,
+      "totalDistanceKm": 20.999493432412496,
+      "averageSpeedKnots": 0.5866845315641329,
+      "averageDistanceFromShoreKm": 156.9667408357437
+     }
+    },
+    {
+     "start": "2026-01-16T08:22:31.000Z",
+     "end": "2026-01-21T07:56:26.000Z",
+     "id": "893ccb9134306d96d80c95902c026a61",
+     "type": "loitering",
+     "position": {
+      "lat": 18.9683,
+      "lon": 58.8066
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8354"
+      ],
+      "rfmo": [
+       "ACAP",
+       "IOTC",
+       "IWC"
+      ],
+      "fao": [
+       "51",
+       "51.3"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      58.312511666666666,
+      19.414291666666667,
+      59.30078666666667,
+      18.52234
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 58,
+      "endDistanceFromShoreKm": 163,
+      "startDistanceFromPortKm": 67.787742,
+      "endDistanceFromPortKm": 208.882578
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "82a54caa248de6a575dd4f04116bc1c8"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 119.56527777777778,
+      "totalDistanceKm": 180.6748282597422,
+      "averageSpeedKnots": 0.8159275380379197,
+      "averageDistanceFromShoreKm": 86.00170607956062
+     }
+    },
+    {
+     "start": "2026-01-23T11:59:14.000Z",
+     "end": "2026-01-23T21:58:24.000Z",
+     "id": "018029775578ea2e9050590ee2235605",
+     "type": "loitering",
+     "position": {
+      "lat": 21.948,
+      "lon": 68.4764
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8480"
+      ],
+      "rfmo": [
+       "IWC",
+       "IOTC",
+       "ACAP"
+      ],
+      "fao": [
+       "51.4",
+       "51"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      68.424135,
+      21.954093333333333,
+      68.52868666666667,
+      21.941811666666666
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 64,
+      "endDistanceFromShoreKm": 55,
+      "startDistanceFromPortKm": 77.388164,
+      "endDistanceFromPortKm": 66.02232000000001
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "82a54caa248de6a575dd4f04116bc1c8"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 9.98611111111111,
+      "totalDistanceKm": 13.122015861625691,
+      "averageSpeedKnots": 0.7095176150859348,
+      "averageDistanceFromShoreKm": 59.25866429504461
+     }
+    },
+    {
+     "start": "2026-01-23T23:58:34.000Z",
+     "end": "2026-01-26T01:59:45.000Z",
+     "id": "869653af2545f56091d7e0c3a28f4ef5",
+     "type": "loitering",
+     "position": {
+      "lat": 21.7813,
+      "lon": 68.3438
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8480"
+      ],
+      "rfmo": [
+       "IOTC",
+       "IWC",
+       "ACAP"
+      ],
+      "fao": [
+       "51",
+       "51.4"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      68.485365,
+      21.857635,
+      68.20216666666667,
+      21.704963333333332
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 64,
+      "endDistanceFromShoreKm": 98,
+      "startDistanceFromPortKm": 70.588914,
+      "endDistanceFromPortKm": 103.349234
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "82a54caa248de6a575dd4f04116bc1c8"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 50.01972222222223,
+      "totalDistanceKm": 49.48507221782681,
+      "averageSpeedKnots": 0.5341853218377651,
+      "averageDistanceFromShoreKm": 86.76398480257832
+     }
+    },
+    {
+     "start": "2026-01-26T04:59:52.000Z",
+     "end": "2026-01-27T07:54:29.000Z",
+     "id": "b3578f5c3adefe6d3ce313915428d2dd",
+     "type": "loitering",
+     "position": {
+      "lat": 21.9394,
+      "lon": 68.2597
+     },
+     "regions": {
+      "mpa": [],
+      "eez": [
+       "8480"
+      ],
+      "rfmo": [
+       "IOTC",
+       "IWC",
+       "ACAP"
+      ],
+      "fao": [
+       "51",
+       "51.4"
+      ],
+      "majorFao": [
+       "51"
+      ],
+      "eez12Nm": [],
+      "highSeas": [],
+      "mpaNoTakePartial": [],
+      "mpaNoTake": []
+     },
+     "boundingBox": [
+      68.278205,
+      21.964726666666667,
+      68.24122833333334,
+      21.913985
+     ],
+     "distances": {
+      "startDistanceFromShoreKm": 77,
+      "endDistanceFromShoreKm": 83,
+      "startDistanceFromPortKm": 91.853352,
+      "endDistanceFromPortKm": 95.960891
+     },
+     "vessel": {
+      "id": "3a1627ae7-7b3c-db33-de98-859ff2c8d4cd",
+      "name": "SEASONS I",
+      "ssvid": "613511209",
+      "flag": "CMR",
+      "type": "other",
+      "nextPort": {
+       "id": "ind-vadinar",
+       "flag": "IND",
+       "name": null,
+       "portVisitEventId": "82a54caa248de6a575dd4f04116bc1c8"
+      }
+     },
+     "loitering": {
+      "totalTimeHours": 26.91027777777778,
+      "totalDistanceKm": 16.450106295606393,
+      "averageSpeedKnots": 0.3300726542190303,
+      "averageDistanceFromShoreKm": 76.61636522529027
+     }
+    }
+   ],
+   "fishing": []
+  },
+  "track_probe": "HTTP 404 (no per-vessel track)",
+  "baseline_period": [
+   "2025-09-01",
+   "2026-03-24"
+  ]
  }
 }
