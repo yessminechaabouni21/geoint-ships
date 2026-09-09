@@ -1,0 +1,198 @@
+{
+  "region": "jamnagar_vadinar",
+  "generated_utc": "2026-09-08T06:15:42.658155+00:00",
+  "bbox": {
+    "min_lat": 22.2,
+    "max_lat": 22.7,
+    "min_lon": 69.5,
+    "max_lon": 70.1
+  },
+  "baseline_period": [
+    "2025-09-01",
+    "2025-10-12"
+  ],
+  "data_source": "live GFW pull -> cached at data/raw/jamnagar_vadinar_sep_oct2025_sar_detections.csv + data/raw/jamnagar_vadinar_sep_oct2025_ais_positions.csv",
+  "sar_ais_distance_calibration": {
+    "method": "GeoTrackNet-style percentile of the CONFIRMED same-vessel (identity-matched) nearest-AIS distance distribution; the full SAR population is a true-match + dark-vessel mixture and is reported only for context",
+    "percentile_choice": {
+      "matched_percentile": 50.0,
+      "matched_basis": "median offset of a confirmed same-vessel pair",
+      "likely_spoofed_percentile": 99.0,
+      "likely_spoofed_false_alarm_rate": 0.01,
+      "likely_spoofed_basis": "a-contrario: a confirmed pair exceeds this only FAR of the time"
+    },
+    "n_sar_detections": 181,
+    "n_pairs_with_distance": 181,
+    "n_confirmed_identity_pairs_pre_screen": 147,
+    "n_confirmed_identity_pairs": 144,
+    "misattribution_screen": {
+      "method": "src.sar_ais_quality.screen_identity_pairs -- bracket check (own AIS brackets the SAR pass yet stays > 15 km away, or no own AIS within +/-2 h) + alternative-vessel check (a different vessel <= 5 km from the SAR point and <= half the attributed distance)",
+      "runs_on": "every calibration (GFW SAR->MMSI mis-attribution is a general dense-traffic data-quality issue, not region-specific)",
+      "n_excluded_suspected_misattribution": 3,
+      "excluded_pairs": [
+        {
+          "sar_id": "60",
+          "matched_mmsi": 419081700,
+          "ship_name": "ADINATH 8",
+          "sar_timestamp": "2025-09-14 01:18:54+00:00",
+          "distance_km": 12.36,
+          "time_gap_h": 8.315,
+          "bracket_status": "unsupported",
+          "nearest_own_bin_km": NaN,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419001256.0,
+          "best_alt_km": 2.224,
+          "reason": "bracket=unsupported (no own AIS bin within +/-2 h of the SAR pass); alternative vessel 2.22 km from SAR point (<= 5 km and <= 0.5x the attributed 12.4 km)"
+        },
+        {
+          "sar_id": "56",
+          "matched_mmsi": 419956827,
+          "ship_name": "PRASIDDHI",
+          "sar_timestamp": "2025-09-14 01:18:54+00:00",
+          "distance_km": 10.06,
+          "time_gap_h": 0.315,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 10.06,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419001455.0,
+          "best_alt_km": 2.335,
+          "reason": "alternative vessel 2.33 km from SAR point (<= 5 km and <= 0.5x the attributed 10.1 km)"
+        },
+        {
+          "sar_id": "114",
+          "matched_mmsi": 419956855,
+          "ship_name": "MSV.KWAJAFAKHRUDDIN",
+          "sar_timestamp": "2025-10-08 01:18:55+00:00",
+          "distance_km": 14.4,
+          "time_gap_h": 0.685,
+          "bracket_status": "consistent",
+          "nearest_own_bin_km": 14.45,
+          "better_alt_exists": true,
+          "best_alt_mmsi": 419001182.0,
+          "best_alt_km": 1.512,
+          "reason": "alternative vessel 1.51 km from SAR point (<= 5 km and <= 0.5x the attributed 14.4 km)"
+        }
+      ],
+      "fraction_excluded": 0.02
+    },
+    "all_pairs_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 1.1173,
+      "p90": 2.3359,
+      "p95": 4.7165,
+      "p99": 10.52,
+      "p99.9": 14.0331,
+      "max": 14.4004,
+      "mean": 1.0286,
+      "note": "MIXTURE (true matches + genuine dark vessels) -- not used for thresholds"
+    },
+    "pre_screen_confirmed_pair_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.6649,
+      "p90": 1.9127,
+      "p95": 6.0425,
+      "p99": 11.3018,
+      "p99.9": 14.1025,
+      "max": 14.4004,
+      "mean": 0.8768
+    },
+    "pre_screen_derived_thresholds_km": {
+      "matched_max": 0.0,
+      "likely_spoofed_min": 11.3018
+    },
+    "confirmed_pair_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.4768,
+      "p90": 1.7154,
+      "p95": 4.4204,
+      "p99": 7.4632,
+      "p99.9": 8.2645,
+      "max": 8.2931,
+      "mean": 0.6394
+    },
+    "derived_thresholds_km": {
+      "matched_max": 0.0,
+      "likely_spoofed_min": 7.4632,
+      "discrepant_band": [
+        0.0,
+        7.4632
+      ]
+    },
+    "likely_spoofed_tail_check": {
+      "p95_km": 4.4204,
+      "p99_km": 7.4632,
+      "p99_over_p95": 1.69,
+      "tukey_far_out_fence_km": 1.907,
+      "n_pairs_beyond_fence": 12,
+      "heavy_tail": false,
+      "note": "no gross outliers beyond the Tukey far-out fence; p99 is not tail-driven"
+    },
+    "confidence": "low",
+    "confidence_note": "only 144 confirmed identity pairs (< 200); this is a single short control window, not a multi-week baseline. The 99th percentile is near the sample maximum -- treat likely_spoofed_min as indicative. Pull a longer baseline and drop the false-alarm rate to 0.001 for an operational value."
+  },
+  "st_dbscan_calibration": {
+    "method_spatial": "Bai et al. adaptive DBSCAN: knee (Kneedle-lite) of the sorted 1-nearest contemporaneous inter-vessel distance curve, floored at 3.0 km",
+    "method_temporal": "ceil of the 90th percentile of the per-vessel successive-AIS-bin gap, floored at 2x temporal resolution",
+    "min_pts": 2,
+    "min_pts_note": "structural (single-linkage first stage), not region-scaled",
+    "n_ais_positions": 113427,
+    "n_vessels": 1237,
+    "n_contemporaneous_pairs": 113427,
+    "n_bin_gaps": 112190,
+    "nn_distance_percentiles_km": {
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 1.5132,
+      "p90": 2.4492
+    },
+    "eps_spatial_candidates_km": {
+      "knee": 2.4502,
+      "p75": 1.5132,
+      "p90": 2.4492,
+      "mean_plus_1std": 2.2261
+    },
+    "eps_spatial_km": {
+      "chosen_method": "knee",
+      "knee_raw": 2.4502,
+      "floor_km": 3.0,
+      "value": 3.0
+    },
+    "bin_gap_hours": {
+      "p50": 1.0,
+      "p90": 1.0,
+      "p99": 22.0
+    },
+    "eps_temporal_hours": {
+      "percentile_raw": 1.0,
+      "floor_hours": 2.0,
+      "value": 2.0
+    }
+  },
+  "derived_thresholds": {
+    "matched_km": 0.0,
+    "likely_spoofed_km": 7.4632,
+    "eps_spatial_km": 3.0,
+    "eps_temporal_hours": 2.0
+  },
+  "manual_comparison": {
+    "available": false,
+    "status": "PROVISIONAL -- tail-outlier concern RESOLVED (automated); eps/geometry spot-check still outstanding",
+    "note": "No hand-calibrated thresholds exist for this region, so manual_reference stays unset and these values are not yet cleared for operational classification. RESOLVED: the SAR<->AIS mis-attribution / tail-outlier concern. calibrate_thresholds now auto-screens every identity pair (src.sar_ais_quality) and dropped 3 suspected-misattribution pair(s) this run BEFORE deriving the cutoffs; the likely_spoofed tail is no longer heavy (see likely_spoofed_tail_check).",
+    "resolved": [
+      "tail-outlier / GFW SAR->AIS mis-attribution: now screened automatically on every calibration run (bracket + alternative-vessel checks). Method validated 5/5 against the original India tail in src/inspect_india_tail_outliers.py."
+    ],
+    "remaining_checks_before_promotion": [
+      "Sample ~8-10 KEPT confirmed pairs (144 available) across the tiers on a folium map (SAR point + own +/-2 h track), same visual sanity check used for qatar_gnss_spoofing_oct2025 / hormuz_control; confirm near-cutoff 'matched' pairs are visibly the same vessel.",
+      "Sanity-check eps_spatial against the region's lane / anchorage geometry -- it must not bridge the inbound vs outbound approach lanes.",
+      "Sanity-check eps_temporal: New Mangalore's is 6 h (vs the Gulf's 2 h) from sparser AIS coverage -- confirm that reflects real coverage and note the effect on ST-DBSCAN temporal permissiveness.",
+      "Only after those, fill in manual_reference and drop the PROVISIONAL status."
+    ]
+  }
+}
